@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>522</width>
+    <height>248</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>522</width>
+    <height>248</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>522</width>
+    <height>248</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="labelIn">
+      <property name="text">
+       <string>Input:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="4">
+     <widget class="QLineEdit" name="lineEditIn"/>
+    </item>
+    <item row="0" column="5">
+     <widget class="QPushButton" name="pushButtonIn">
+      <property name="text">
+       <string>Select...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="labelOut">
+      <property name="text">
+       <string>Output:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="4">
+     <widget class="QLineEdit" name="lineEditOut"/>
+    </item>
+    <item row="1" column="5">
+     <widget class="QPushButton" name="pushButtonOut">
+      <property name="text">
+       <string>Select...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QLabel" name="labelForm">
+      <property name="text">
+       <string>Output format:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QLabel" name="labelPSM">
+      <property name="text">
+       <string>Page segmenation:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4" colspan="2">
+     <widget class="QDialogButtonBox" name="buttonBox">
+      <property name="standardButtons">
+       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QComboBox" name="comboBoxLang"/>
+    </item>
+    <item row="2" column="4">
+     <widget class="QLabel" name="labelLang">
+      <property name="text">
+       <string>Language:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3" colspan="3">
+     <widget class="QComboBox" name="comboBoxPSM">
+      <item>
+       <property name="text">
+        <string>Orientation and script detection (OSD) only</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Automatic page segmentation with OSD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Automatic page segmentation, but no OSD, or OCR</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fully automatic page segmentation, but no OSD</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Assume a single column of text of variable sizes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Assume a single uniform block of vertically aligned text</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Assume a single uniform block of text</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Treat the image as a single text line</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Treat the image as a single word</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Treat the image as a single word in a circle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Treat the image as a single character</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QComboBox" name="comboBoxForm">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <item>
+       <property name="text">
+        <string>txt</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>html/hocr</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>522</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionConfiguration"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAbout_QT"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionConfiguration">
+   <property name="text">
+    <string>Configuration</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionAbout_QT">
+   <property name="text">
+    <string>About QT</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>402</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
