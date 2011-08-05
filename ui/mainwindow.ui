@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>522</width>
-    <height>248</height>
+    <height>240</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>522</width>
-    <height>248</height>
+    <height>240</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>522</width>
-    <height>248</height>
+    <height>240</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -61,31 +61,31 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="0" colspan="2">
+    <item row="4" column="0" colspan="2">
      <widget class="QLabel" name="labelForm">
       <property name="text">
        <string>Output format:</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="0" colspan="3">
+    <item row="5" column="0" colspan="3">
      <widget class="QLabel" name="labelPSM">
       <property name="text">
        <string>Page segmenation:</string>
       </property>
      </widget>
     </item>
-    <item row="4" column="4" colspan="2">
+    <item row="6" column="4" colspan="2">
      <widget class="QDialogButtonBox" name="buttonBox">
       <property name="standardButtons">
-       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       <set>QDialogButtonBox::Close|QDialogButtonBox::Ok</set>
       </property>
      </widget>
     </item>
-    <item row="2" column="5">
+    <item row="4" column="5">
      <widget class="QComboBox" name="comboBoxLang"/>
     </item>
-    <item row="2" column="4">
+    <item row="4" column="4">
      <widget class="QLabel" name="labelLang">
       <property name="text">
        <string>Language:</string>
@@ -95,7 +95,7 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="3" colspan="3">
+    <item row="5" column="3" colspan="3">
      <widget class="QComboBox" name="comboBoxPSM">
       <item>
        <property name="text">
@@ -154,7 +154,7 @@
       </item>
      </widget>
     </item>
-    <item row="2" column="3">
+    <item row="4" column="3">
      <widget class="QComboBox" name="comboBoxForm">
       <property name="styleSheet">
        <string notr="true"/>
@@ -169,6 +169,23 @@
         <string>html/hocr</string>
        </property>
       </item>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QCheckBox" name="checkBoxOpen">
+      <property name="text">
+       <string>Open after OCR</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3" colspan="2">
+     <widget class="QCheckBox" name="checkBoxName">
+      <property name="text">
+       <string>Output based on input</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
    </layout>

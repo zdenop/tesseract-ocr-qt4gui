@@ -6,12 +6,16 @@
 #define MAINWINDOW_H
 
 #include <QtCore/QDir>
+#include <QtCore/QDebug>
 #include <QtCore/QProcess>
+#include <QtCore/QSettings>
 #include <QtCore/QTextCodec>
 #include <QtGui/QApplication>
+#include <QtGui/QCloseEvent>
+#include <QtGui/QFileDialog>
 #include <QtGui/QMainWindow>
+#include <QtGui/QMessageBox>
 #include <QtGui/QStyleFactory>
-
 
 namespace Ui {
     class MainWindow;
@@ -27,10 +31,13 @@ public:
 
 protected:
     void initForm();
+    void closeEvent(QCloseEvent* event);
 
 private:
     Ui::MainWindow *ui;
     QProcess process;
+    void readSettings();
+    void writeSettings();
 
 private slots:
     void on_actionAbout_triggered();
