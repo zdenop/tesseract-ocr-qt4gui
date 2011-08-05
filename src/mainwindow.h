@@ -5,9 +5,13 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include <QProcess>
-#include <QDir>
+#include <QtCore/QDir>
+#include <QtCore/QProcess>
+#include <QtCore/QTextCodec>
+#include <QtGui/QApplication>
+#include <QtGui/QMainWindow>
+#include <QtGui/QStyleFactory>
+
 
 namespace Ui {
     class MainWindow;
@@ -36,6 +40,7 @@ private slots:
     void on_pushButtonOut_clicked();
 
     QList<QString> getLangugagelist();
+    void version_info();
     void processErrors();
     void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void processError(QProcess::ProcessError error);

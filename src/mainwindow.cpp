@@ -11,6 +11,8 @@
 #include "ui_mainwindow.h"
 
 const QString ProductVersion("1.00");
+const QString ProjectUrl("https://github.com/zdenop/qt4-tesseract");
+const QString ProjectName("QT4 tesseract");
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -30,6 +32,7 @@ MainWindow::~MainWindow()
 void MainWindow::initForm()
 {
     // TODO(zdenop): from settings
+    version_info();
     ui->lineEditIn->setText("~/eurotext.tif");
     //ui->lineEditOut->setText("/home/zdeno/test_back");
     // TODO(zdenop): from settings
@@ -95,7 +98,8 @@ void MainWindow::initForm()
     connect(&process, SIGNAL(error(QProcess::ProcessError)),
             this, SLOT(processError(QProcess::ProcessError)));
 
-    // TODO(zdenop): change of combobox or lineedit after init emit signal for saving settings
+    // TODO(zdenop): change of combobox or lineedit after init
+    // emit signal for saving settings
 }
 
 QList<QString> MainWindow::getLangugagelist() {
@@ -152,6 +156,30 @@ QList<QString> MainWindow::getLangugagelist() {
     return languages;
 }
 
+void MainWindow::version_info() {
+  QString ocrCmd = "tesseract";
+  QStringList arguments;
+  QProcess *lprocess = new QProcess(this);;
+  arguments << "-v";
+  lprocess->start(ocrCmd, arguments);
+  lprocess->waitForFinished(-1);
+
+  QString s = QString::fromLocal8Bit(lprocess->
+                                     readAllStandardError().constData());
+  QStringList lines;
+  QString line, version;
+  lines = s.split("\n");
+  for (int i = 0; i < lines.size(); ++i) {
+      line = lines.at(i);
+      if (line.contains("tesseract-3.01")) {
+          ui->comboBoxPSM->setEnabled(true);
+          version = "3.01";
+        } else {
+        ui->comboBoxPSM->setEnabled(false);
+        }
+   }
+  }
+
 void MainWindow::on_buttonBox_accepted() {
     // TODO(zdenop): take it from settings
     QString ocrCmd = "/usr/local/bin/tesseract";
@@ -164,22 +192,28 @@ void MainWindow::on_buttonBox_accepted() {
     QStringList args;
 
     QString in = ui->lineEditIn->text();
+    args << in;
     QString out = ui->lineEditOut->text();
     out = out.replace(".txt","").replace(".html","");
+    args << out;
 
-    QString lang = ui->comboBoxLang->itemData(ui->comboBoxLang->currentIndex()).toString();
-    int PSM = ui->comboBoxPSM->currentIndex();
-    QString format;
-    if (ui->comboBoxForm->currentIndex() == 1)
-        format = "hocr";
-    else
-        format = "";
-    args << in << out << "-l" << lang << "-psm" << QString::number(PSM) << format;
-    statusBar()->showMessage(tr("OCR program is running..."));
-    process.start(ocrCmd, args);
+    QString lang = ui->comboBoxLang->itemData(
+          ui->comboBoxLang->currentIndex()).toString();
+    args << "-l" << lang;
+
+    if (ui->comboBoxPSM->isEnabled()) {
+      QString format;
+      int PSM = ui->comboBoxPSM->currentIndex();
+      if (ui->comboBoxForm->currentIndex() == 1)
+          format = "hocr";
+      else
+          format = "";
+      args  << "-psm" << QString::number(PSM) << format;
+      }
 
     qDebug() << "args: " << args;
-
+    statusBar()->showMessage(tr("OCR program is running..."));
+    process.start(ocrCmd, args);
 }
 
 void MainWindow::processErrors() {
@@ -255,11 +289,13 @@ void MainWindow::on_actionAbout_triggered() {
   QString abouttext = tr("<h1>QT4 tesseract-ocr GUI</h1>");
 
   abouttext.append(tr("<p>This is a simple GUI for tesseract-ocr</p>"));
-  /*abouttext.append(tr("<p>Project page: <a href=%1>%2</a></p>").
-                   arg(PROJECT_URL).arg(PROJECT_URL_NAME));*/
+  abouttext.append(tr("<p>Project page: <a href=%1>%2</a></p>").
+                   arg(ProjectUrl).arg(ProjectName));
+
   abouttext.append(tr("Copyright 2011 Zdenko Podobný</p>"));
   abouttext.append(tr("<p>This software is released under "
-                      "<a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Apache License 2.0</a></p>"));
+                      "<a href=\"http://www.apache.org/licenses/LICENSE-2.0\">"
+                      "Apache License 2.0</a></p>"));
   QMessageBox::about(this, tr("About application"), abouttext);
 }
 
