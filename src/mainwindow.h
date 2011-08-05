@@ -19,7 +19,7 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();    
+    ~MainWindow();
 
 protected:
     void initForm();
@@ -35,7 +35,7 @@ private slots:
     void on_pushButtonIn_clicked();
     void on_pushButtonOut_clicked();
 
-    void getLangugagelist();
+    QList<QString> getLangugagelist();
     void processErrors();
     void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void processError(QProcess::ProcessError error);

@@ -1,5 +1,5 @@
 /*
- *  
+ *
 */
 
 //#include <QSettings>
@@ -15,7 +15,7 @@ const QString ProductVersion("1.00");
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
-{    
+{
     ui->setupUi(this);
 
     setWindowTitle(QString(tr("QT4 tesseract-ocr GUI %1")).arg(ProductVersion));
@@ -32,11 +32,58 @@ void MainWindow::initForm()
     // TODO(zdenop): from settings
     ui->lineEditIn->setText("~/eurotext.tif");
     //ui->lineEditOut->setText("/home/zdeno/test_back");
+    // TODO(zdenop): from settings
+    ui->actionConfiguration->setVisible(false);
+
+    QMap<QString, QString> map;
+    map["bul"] = QObject::tr("Bulgarian");
+    map["cat"] = QObject::tr("Catalan");
+    map["ces"] = QObject::tr("Czech");
+    map["chi_tra"] = QObject::tr("Chinese (Traditional)");
+    map["chi_sim"] = QObject::tr("Chinese (Simplified)");
+    map["dan"] = QObject::tr("Danish");
+    map["dan-frak"] = QObject::tr("Danish (Fraktur)");
+    map["nld"] = QObject::tr("Dutch");
+    map["eng"] = QObject::tr("English");
+    map["fin"] = QObject::tr("Finnish");
+    map["fra"] = QObject::tr("French");
+    map["deu"] = QObject::tr("German");
+    map["deu-frak"] = QObject::tr("German (Fraktur)");
+    map["ell"] = QObject::tr("Greek");
+    map["hun"] = QObject::tr("Hungarian");
+    map["ind"] = QObject::tr("Indonesian");
+    map["ita"] = QObject::tr("Italian");
+    map["jpn"] = QObject::tr("Japanese");
+    map["kor"] = QObject::tr("Korean");
+    map["lav"] = QObject::tr("Latvian");
+    map["lit"] = QObject::tr("Lithuanian");
+    map["nor"] = QObject::tr("Norwegian");
+    map["pol"] = QObject::tr("Polish");
+    map["por"] = QObject::tr("Portuguese");
+    map["ron"] = QObject::tr("Romanian");
+    map["rus"] = QObject::tr("Russian");
+    map["slk"] = QObject::tr("Slovak");
+    map["slk-frak"] = QObject::tr("Slovak (Fraktur)");
+    map["slv"] = QObject::tr("Slovenian");
+    map["spa"] = QObject::tr("Spanish");
+    map["srp"] = QObject::tr("Serbian");
+    map["swe"] = QObject::tr("Swedish");
+    map["swe-frak"] = QObject::tr("Swedish (Fraktur)");
+    map["tgl"] = QObject::tr("Tagalog");
+    map["tur"] = QObject::tr("Turkish");
+    map["ukr"] = QObject::tr("Ukrainian");
+    map["vie"] = QObject::tr("Vietnamese");
 
     // TODO(zdenop): get from cmd line ;-)
-    getLangugagelist();
-    ui->comboBoxLang->addItem("English","eng");
-    ui->comboBoxLang->addItem("Slovak","slk");
+    QList<QString> languages;
+    languages = getLangugagelist();
+
+    QString lang;
+    foreach(lang, languages)
+      if (map[lang] == "")
+        ui->comboBoxLang->addItem(lang,lang);
+      else
+         ui->comboBoxLang->addItem(map[lang],lang);
 
     // TODO(zdenop): get from cmd line ;-)
     ui->comboBoxPSM->setCurrentIndex(3);
@@ -51,9 +98,9 @@ void MainWindow::initForm()
     // TODO(zdenop): change of combobox or lineedit after init emit signal for saving settings
 }
 
-void MainWindow::getLangugagelist() {
+QList<QString> MainWindow::getLangugagelist() {
     QProcess *lprocess = new QProcess(this);;
-    QString ocrCmd = "/_usr/local/bin/tesseract";
+    QString ocrCmd = "/usr/local/bin/tesseract";
 
     // workaround for windows
     QFile f (ocrCmd);
@@ -65,36 +112,44 @@ void MainWindow::getLangugagelist() {
     lprocess->start(ocrCmd, arguments);
     lprocess->waitForFinished(-1);
 
-    QString s = QString::fromLocal8Bit(lprocess->readAllStandardError().constData());
-    QStringList lines, l_words;
+    QString s = QString::fromLocal8Bit(lprocess->
+                                       readAllStandardError().constData());
+    QStringList lines;
     QString line, langFile;
     lines = s.split("\n");
     for (int i = 0; i < lines.size(); ++i) {
         line = lines.at(i);
-        if (lines.at(i).contains("_ICQ_")) {
-            l_words = line.split(' ');
-            langFile = l_words.last();
+        if (line.contains("_ICQ_")) {
+            langFile = line.replace("Error openning data file ","");
             }
     }
 
-    int lastindex = langFile.lastIndexOf("_ICQ_");
-    QString tessdataPath = langFile.left(lastindex);
-    QString extention = langFile.right(langFile.length() - lastindex - 6); // "_ICQ_." = 6;
+    // TODO(zdenop): Get TESSDATA_PREFIX from enviroment
+    QFileInfo fi(langFile);
+    QString tessdataPath = fi.absolutePath();
+    QString extention = fi.suffix();
     qDebug() <<"tessdataPath:" << tessdataPath;
     qDebug() <<"extention:" << extention;
 
     QDir dir(tessdataPath);
     if (!dir.exists())
         qWarning("Cannot find the tessdata directory");
+
     QString filter = "*." + extention;
-    dir.setNameFilters(filter.split(' '));
-    //dir.setSorting(QDir::Size | QDir::Reversed);
+    QStringList filters;
+    filters << filter.trimmed();
+    dir.setNameFilters(filters);
+
+    QList<QString> languages;
     QFileInfoList list = dir.entryInfoList();
+
     for (int i = 0; i < list.size(); ++i) {
         QFileInfo fileInfo = list.at(i);
-        qDebug() << qPrintable(QString("%1").arg(fileInfo.baseName()));
+        languages.append(QString("%1").arg(fileInfo.baseName()));
     }
+    qSort(languages);
 
+    return languages;
 }
 
 void MainWindow::on_buttonBox_accepted() {
@@ -154,12 +209,13 @@ void MainWindow::processError(QProcess::ProcessError error) {
 void MainWindow::on_pushButtonIn_clicked() {
     QString filetype = "Image files (*.bmp *.png *.jpeg *.jpg *.tif *.tiff);;";
     filetype += "All files (*.*)";
+    QString last_path = QDir::homePath();
+    //TODO(zdenop): last_path,
 
     QString imageFile = QFileDialog::getOpenFileName(
                           this,
                           tr("Select image file..."),
-                          //TODO(zdenop): last_path,
-                           "~/",
+                          last_path,
                           filetype);
 
     ui->lineEditIn->setText(imageFile);
@@ -196,13 +252,12 @@ void MainWindow::on_pushButtonOut_clicked() {
 }
 
 void MainWindow::on_actionAbout_triggered() {
-  QString abouttext =
-    tr("<h1>QT4 tesseract-ocr GUI</h1>");
+  QString abouttext = tr("<h1>QT4 tesseract-ocr GUI</h1>");
 
   abouttext.append(tr("<p>This is a simple GUI for tesseract-ocr</p>"));
   /*abouttext.append(tr("<p>Project page: <a href=%1>%2</a></p>").
                    arg(PROJECT_URL).arg(PROJECT_URL_NAME));*/
-    abouttext.append("Copyright 2011 Zdenko Podobný</p>");
+  abouttext.append(tr("Copyright 2011 Zdenko Podobný</p>"));
   abouttext.append(tr("<p>This software is released under "
                       "<a href=\"http://www.apache.org/licenses/LICENSE-2.0\">Apache License 2.0</a></p>"));
   QMessageBox::about(this, tr("About application"), abouttext);
