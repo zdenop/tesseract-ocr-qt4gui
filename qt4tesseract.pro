@@ -15,4 +15,29 @@ HEADERS  += src/mainwindow.h
 
 FORMS    += ui/mainwindow.ui
 
-#RC_FILE = qt4tesseract.rc
+
+TRANSLATIONS += resources/translations/qt4tesseract_en.ts \
+    resources/translations/qt4tesseract_sk.ts
+CODECFORTR = UTF-8
+
+RESOURCES = resources/qt4tesseract.qrc
+
+win32 {
+  Debug:CONFIG += console
+
+  Release:DEFINES += NO_CONSOLE
+  updateqm.input = TRANSLATIONS
+  updateqm.output = resources/translations/${QMAKE_FILE_BASE}.qm
+  updateqm.commands = $$QMAKE_LRELEASE \
+      -silent \
+      ${QMAKE_FILE_IN} \
+      -qm \
+      resources/translations/${QMAKE_FILE_BASE}.qm
+  updateqm.CONFIG += no_link
+
+  localize.depends = resources/translations/*.qm
+  localize.path = resources/translations/
+  localize.files = resources/translations/*.qm
+  localize.commands = lrelease resources/translations/*ts
+  #RC_FILE = resources/qt4tesseract.rc
+}

@@ -10,6 +10,7 @@
 #include <QtCore/QProcess>
 #include <QtCore/QSettings>
 #include <QtCore/QTextCodec>
+#include <QtCore/QTranslator>
 #include <QtGui/QApplication>
 #include <QtGui/QCloseEvent>
 #include <QtGui/QFileDialog>
