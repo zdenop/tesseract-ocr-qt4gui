@@ -7,7 +7,7 @@
 
 const QString ProductVersion("1.00");
 const QString ProjectUrl("https://github.com/zdenop/qt4-tesseract");
-const QString ProjectName("QT4 tesseract");
+const QString ProjectName("qt4-tesseract");
 const QString Organization("tesseract-ocr");
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -17,7 +17,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     // TODO(zdenop): get psm from cmd line ;-)
 
-    setWindowTitle(QString(tr("QT4 tesseract-ocr GUI %1")).arg(ProductVersion));
+    setWindowTitle(QString(tr("QT4 Tesseract OCR GUI %1")).arg(ProductVersion));
+    setWindowIcon(QIcon(":/Images/images/qt4tesseract.svg"));
     readSettings();
     initForm();
 }
@@ -442,7 +443,15 @@ void MainWindow::on_pushButtonOut_clicked() {
 }
 
 void MainWindow::on_actionAbout_triggered() {
-  QString abouttext = tr("<h1>QT4 tesseract-ocr GUI</h1>");
+  QMessageBox aboutMB(this);
+
+  QPixmap appLogo(":/Images/images/qt4tesseract.svg");
+//  QMatrix mat;
+//  mat.rotate((-90*1)%360);
+//  QPixmap pm1=appLogo.transformed(mat);
+  aboutMB.setIconPixmap(appLogo);
+
+  QString abouttext = tr("<h1>QT4 Tesseract OCR GUI</h1>");
 
   abouttext.append(tr("<p>This is a simple GUI for tesseract-ocr</p>"));
   abouttext.append(tr("<p>Project page: <a href=%1>%2</a></p>").
@@ -452,7 +461,13 @@ void MainWindow::on_actionAbout_triggered() {
   abouttext.append(tr("<p>This software is released under "
                       "<a href=\"http://www.apache.org/licenses/LICENSE-2.0\">"
                       "Apache License 2.0</a></p>"));
-  QMessageBox::about(this, tr("About application"), abouttext);
+  abouttext.append(tr("<p>Translation is done on "
+               "<a href=\"https://www.transifex.net/projects/p/qt4-tesseract\">"
+               "Transifex.net</a></p>"));
+  aboutMB.setText(abouttext);
+
+  aboutMB.setParent(this);
+  aboutMB.exec();
 }
 
 

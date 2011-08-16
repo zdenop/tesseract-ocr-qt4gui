@@ -1,0 +1,32 @@
+IDI_ICON1 ICON DISCARDABLE "images/qt4tesseract.ico"
+
+#define QT4Tesseract_VER 1,0,1,0
+
+1 VERSIONINFO
+ FILEVERSION QT4Tesseract_VER
+ PRODUCTVERSION QT4Tesseract_VER
+ FILEFLAGS 0x0L
+ FILEFLAGSMASK 0x3fL
+ FILEOS 0x00040004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "QT4Tesseract"
+            VALUE "FileDescription", "QT4 Tesseract OCR GUI"
+            VALUE "FileVersion", "1.0"
+            VALUE "LegalCopyright", "https://github.com/zdenop/qt4-tesseract"
+            VALUE "InternalName", "QT4Tesseract"
+            VALUE "OriginalFilename", "qt4tesseract.exe"
+            VALUE "ProductName", "QT4 Tesseract"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END

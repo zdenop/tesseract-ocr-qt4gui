@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>images/qt4tesseract.svg</file>
+    </qresource>
+    <qresource prefix="/Languages">
+        <file>translations/qt4tesseract_en.qm</file>
+        <file>translations/qt4tesseract_et.qm</file>
+        <file>translations/qt4tesseract_sk.qm</file>
+    </qresource>
+</RCC>
