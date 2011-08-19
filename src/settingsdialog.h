@@ -26,7 +26,8 @@
 #include <QtCore/QDebug>
 #include <QtCore/QProcess>
 #include <QtCore/QSettings>
-#include "temp/ui_settings.h"
+
+#include "ui_settings.h"
 
 const QString ProductVersion("1.00");
 const QString ProjectUrl("https://github.com/zdenop/qt4-tesseract");

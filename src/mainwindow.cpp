@@ -20,8 +20,8 @@
 *
 **********************************************************************/
 
-#include "src/mainwindow.h"
-#include "temp/ui_mainwindow.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
@@ -245,6 +245,13 @@ void MainWindow::initForm() {
   else
     ui->comboBoxLang->addItem(map[lang], lang);
 
+  // sort language list
+  QSortFilterProxyModel* proxy = new QSortFilterProxyModel(ui->comboBoxLang);  // <--
+  proxy->setSourceModel(ui->comboBoxLang->model());                            // <--
+  ui->comboBoxLang->model()->setParent(proxy);                                 // <--
+  ui->comboBoxLang->setModel(proxy);                                           // <--
+  ui->comboBoxLang->model()->sort(0); // "A","B","C"
+
   readSettings();
 
   connect(&process, SIGNAL(readyReadStandardError()),
@@ -259,12 +266,15 @@ void MainWindow::initForm() {
 
 QList<QString> MainWindow::getLangugagelist() {
   QProcess *lprocess = new QProcess(this);
-  QString ocrCmd = "/usr/local/bin/tesseract";
 
-  // workaround for windows
-  QFile f(ocrCmd);
-  if (!f.exists())
-    ocrCmd = "tesseract";
+  QSettings settings(QSettings::IniFormat, QSettings::UserScope,
+                     Organization, ProjectName);
+  QString ocrCmd;
+
+  if (settings.contains("OCR/program"))
+    ocrCmd = settings.value("OCR/program").toString();
+
+  // TODO(zdenop): check for missing setting or empty string
 
   QStringList arguments;
   arguments << "a" << "b" << "-l" << "_ICQ_";
@@ -432,9 +442,6 @@ void MainWindow::on_actionAbout_triggered() {
   QMessageBox aboutMB(this);
 
   QPixmap appLogo(":/Images/images/qt4tesseract.svg");
-//  QMatrix mat;
-//  mat.rotate((-90*1)%360);
-//  QPixmap pm1=appLogo.transformed(mat);
   aboutMB.setIconPixmap(appLogo);
 
   QString abouttext = tr("<h1>QT4 Tesseract OCR GUI</h1>");
@@ -540,4 +547,12 @@ void MainWindow::feature_limits() {
   ui->comboBoxForm->setCurrentIndex(
         settings.value("Parameters/format").toInt());
   ui->comboBoxPSM->setCurrentIndex(settings.value("Parameters/psm").toInt());
+
+  // hocr/html is supported from 3.01
+  if (settings.value("OCR/version").toFloat() > 3.00) {
+      ui->comboBoxForm->setMaxVisibleItems(1);
+  } else {
+      ui->comboBoxForm->setMaxVisibleItems(0);
+  }
+
 }

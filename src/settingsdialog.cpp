@@ -20,7 +20,7 @@
 *
 **********************************************************************/
 
-#include "src/settingsdialog.h"
+#include "settingsdialog.h"
 
 SettingsDialog::SettingsDialog(QWidget* parent) : QDialog(parent) {
   setFixedSize(420, 370);
@@ -95,9 +95,14 @@ void SettingsDialog::on_pb_check_clicked() {
     if (line.contains("tesseract 3.01")) {
       lbl_VERSION->setText("3.01");
       return;
-    } else if (line.contains("Usage:tesseract imagename outputbase [-l lang] [configfile [[+|-]varfile]...]")) {
+    } else if (line.contains(
+                   QString("Usage:tesseract imagename outputbase [-l lang] [configfile").arg(ocrCmd))) {
       lbl_VERSION->setText("3.00");
       return;
+    } else if (line.contains(
+                   QString("%1:Error:Usage:%1 imagename outputbase [-l lang] [configfile").arg(ocrCmd))) {
+        lbl_VERSION->setText("2.04");
+        return;
     } else {
       lbl_VERSION->setText("unknown");
       return;

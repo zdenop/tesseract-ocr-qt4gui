@@ -37,6 +37,7 @@
 #include <QtGui/QMessageBox>
 #include <QtGui/QSplashScreen>
 #include <QtGui/QStyleFactory>
+#include <QSortFilterProxyModel>
 
 #include "src/settingsdialog.h"
 
