@@ -9,6 +9,8 @@ MOC_DIR += temp
 UI_DIR += temp
 RCC_DIR += temp
 
+INCLUDEPATH += ./
+
 SOURCES += src/main.cpp \
            src/mainwindow.cpp \
     src/settingsdialog.cpp

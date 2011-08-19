@@ -1,10 +1,9 @@
 /**********************************************************************
-* File:                SettingsDialog.h
-* Description: Settings Dialog
-* Author:            Zdenko Podobny
-* Created:         2011-02-11
+* File:            settingsdialog.h
+* Description:     settings dialog
+* Author:          Zdenko Podobny
+* Created:         2011-08-18
 *
-* (C) Copyright 2010, Marcel Kolodziejczyk
 * (C) Copyright 2011, Zdenko Podobny
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
@@ -21,13 +20,13 @@
 *
 **********************************************************************/
 
-#ifndef SRC_INCLUDE_SETTINGSDIALOG_H_
-#define SRC_INCLUDE_SETTINGSDIALOG_H_
+#ifndef SRC_SETTINGSDIALOG_H_
+#define SRC_SETTINGSDIALOG_H_
 
 #include <QtCore/QDebug>
 #include <QtCore/QProcess>
 #include <QtCore/QSettings>
-#include "ui_settings.h"
+#include "temp/ui_settings.h"
 
 const QString ProductVersion("1.00");
 const QString ProjectUrl("https://github.com/zdenop/qt4-tesseract");
@@ -51,4 +50,4 @@ class SettingsDialog : public QDialog, public Ui::SettingsDialog {
     void on_pb_check_clicked();
 };
 
-#endif  // SRC_INCLUDE_SETTINGSDIALOG_H_
+#endif  // SRC_SETTINGSDIALOG_H_

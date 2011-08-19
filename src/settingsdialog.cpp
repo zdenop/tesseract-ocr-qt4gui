@@ -20,14 +20,13 @@
 *
 **********************************************************************/
 
-#include "settingsdialog.h"
+#include "src/settingsdialog.h"
 
-SettingsDialog::SettingsDialog(QWidget* parent)
-  : QDialog(parent) {
+SettingsDialog::SettingsDialog(QWidget* parent) : QDialog(parent) {
   setFixedSize(420, 370);
-  setWindowTitle(tr("%1 :: Configuration...").arg(ProjectName));
-
   setupUi(this);
+  //setWindowTitle(tr("%1 :: Configuration...").arg(ProjectName));
+
   initSettings();
 
   QObject::connect(buttonBox, SIGNAL(accepted()), this, SLOT(saveSettings()));
@@ -68,7 +67,7 @@ void SettingsDialog::initSettings() {
 }
 
 void SettingsDialog::on_cb_prefix_toggled() {
-  if(cb_prefix->isChecked()) {
+  if (cb_prefix->isChecked()) {
     ln_prefix->setEnabled(false);
     pb_prefix->setEnabled(false);
   } else {
@@ -81,7 +80,7 @@ void SettingsDialog::on_pb_check_clicked() {
   QString ocrCmd = ln_prog->text();
 
   QStringList arguments;
-  QProcess *lprocess = new QProcess(this);;
+  QProcess *lprocess = new QProcess(this);
   arguments << "-v";
   lprocess->start(ocrCmd, arguments);
   lprocess->waitForFinished(-1);
@@ -92,16 +91,16 @@ void SettingsDialog::on_pb_check_clicked() {
   QString line;
   lines = s.split("\n");
   for (int i = 0; i < lines.size(); ++i) {
-      line = lines.at(i);
-      if (line.contains("tesseract 3.01")) {
-          lbl_VERSION->setText("3.01");
-          return;
-      } else if (line.contains("Usage:tesseract imagename outputbase [-l lang] [configfile [[+|-]varfile]...]")) {
-          lbl_VERSION->setText("3.00");
-          return;
-      } else {
-          lbl_VERSION->setText("unknown");
-          return;
-        }
+    line = lines.at(i);
+    if (line.contains("tesseract 3.01")) {
+      lbl_VERSION->setText("3.01");
+      return;
+    } else if (line.contains("Usage:tesseract imagename outputbase [-l lang] [configfile [[+|-]varfile]...]")) {
+      lbl_VERSION->setText("3.00");
+      return;
+    } else {
+      lbl_VERSION->setText("unknown");
+      return;
     }
   }
+}

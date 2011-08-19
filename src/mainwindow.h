@@ -1,9 +1,27 @@
-/*
+/**********************************************************************
+* File:            mainwindow.h
+* Description:     main window
+* Author:          Zdenko Podobny
+* Created:         2011-08-18
 *
-*/
+* (C) Copyright 2011, Zdenko Podobny
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**        http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*
+**********************************************************************/
 
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef SRC_MAINWINDOW_H_
+#define SRC_MAINWINDOW_H_
 
 #include <QtCore/QDir>
 #include <QtCore/QDebug>
@@ -20,32 +38,31 @@
 #include <QtGui/QSplashScreen>
 #include <QtGui/QStyleFactory>
 
-#include "settingsdialog.h"
+#include "src/settingsdialog.h"
 
 namespace Ui {
-    class MainWindow;
+class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+class MainWindow : public QMainWindow {
+  Q_OBJECT
 
-public:
+  public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     SettingsDialog* runSettingsDialog;
 
-protected:
+  protected:
     void initForm();
     void closeEvent(QCloseEvent* event);
 
-private:
+  private:
     Ui::MainWindow *ui;
     QProcess process;
     void readSettings();
     void writeSettings();
 
-private slots:
+  private slots:
     void on_actionConfiguration_triggered();
     void on_actionAbout_triggered();
     void on_actionAbout_QT_triggered();
@@ -60,4 +77,4 @@ private slots:
     void feature_limits();
 };
 
-#endif // MAINWINDOW_H
+#endif  // SRC_MAINWINDOW_H_
