@@ -10,10 +10,13 @@ UI_DIR += temp
 RCC_DIR += temp
 
 SOURCES += src/main.cpp \
-           src/mainwindow.cpp
-HEADERS  += src/mainwindow.h
+           src/mainwindow.cpp \
+    src/settingsdialog.cpp
+HEADERS  += src/mainwindow.h \
+    src/settingsdialog.h
 
-FORMS    += ui/mainwindow.ui
+FORMS    += ui/mainwindow.ui \
+    ui/settings.ui
 
 TRANSLATIONS += resources/translations/qt4tesseract_en.ts \
     resources/translations/qt4tesseract_et.ts \
@@ -42,4 +45,5 @@ win32 {
   localize.commands = lrelease resources/translations/*ts
 }
 
+!contains(CONFIG, build_pass) system(lupdate qt4tesseract.pro)
 !contains(CONFIG, build_pass) system(lrelease qt4tesseract.pro)

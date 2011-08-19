@@ -20,6 +20,8 @@
 #include <QtGui/QSplashScreen>
 #include <QtGui/QStyleFactory>
 
+#include "settingsdialog.h"
+
 namespace Ui {
     class MainWindow;
 }
@@ -31,6 +33,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    SettingsDialog* runSettingsDialog;
 
 protected:
     void initForm();
@@ -43,6 +46,7 @@ private:
     void writeSettings();
 
 private slots:
+    void on_actionConfiguration_triggered();
     void on_actionAbout_triggered();
     void on_actionAbout_QT_triggered();
     void on_buttonBox_accepted();
@@ -50,10 +54,10 @@ private slots:
     void on_pushButtonOut_clicked();
 
     QList<QString> getLangugagelist();
-    void version_info();
     void processErrors();
     void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void processError(QProcess::ProcessError error);
+    void feature_limits();
 };
 
 #endif // MAINWINDOW_H

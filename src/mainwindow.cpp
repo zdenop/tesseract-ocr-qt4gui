@@ -5,11 +5,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-const QString ProductVersion("1.00");
-const QString ProjectUrl("https://github.com/zdenop/qt4-tesseract");
-const QString ProjectName("qt4-tesseract");
-const QString Organization("tesseract-ocr");
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -31,9 +26,8 @@ MainWindow::~MainWindow()
 void MainWindow::initForm()
 {
     // TODO(zdenop): from settings
-    version_info();
 
-    // http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+  // http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     QMap<QString, QString> map;
     map["abk"] = QObject::tr("Abkhaz");
     map["aar"] = QObject::tr("Afar");
@@ -311,38 +305,17 @@ QList<QString> MainWindow::getLangugagelist() {
     return languages;
 }
 
-void MainWindow::version_info() {
-  QString ocrCmd = "tesseract";
-  QStringList arguments;
-  QProcess *lprocess = new QProcess(this);;
-  arguments << "-v";
-  lprocess->start(ocrCmd, arguments);
-  lprocess->waitForFinished(-1);
-
-  QString s = QString::fromLocal8Bit(lprocess->
-                                     readAllStandardError().constData());
-  QStringList lines;
-  QString line, version;
-  lines = s.split("\n");
-  for (int i = 0; i < lines.size(); ++i) {
-      line = lines.at(i);
-      if (line.contains("tesseract-3.01")) {
-          ui->comboBoxPSM->setEnabled(true);
-          version = "3.01";
-        } else {
-        ui->comboBoxPSM->setEnabled(false);
-        }
-   }
-  }
-
 void MainWindow::on_buttonBox_accepted() {
-    // TODO(zdenop): take it from settings
-    QString ocrCmd = "/usr/local/bin/tesseract";
+    writeSettings();
 
-    // workaround for windows
-    QFile f (ocrCmd);
-    if( !f.exists() )
-        ocrCmd = "tesseract";
+    QSettings settings(QSettings::IniFormat, QSettings::UserScope,
+                       Organization, ProjectName);
+    QString ocrCmd;
+
+    if (settings.contains("OCR/program"))
+      ocrCmd = settings.value("OCR/program").toString();
+
+    // TODO(zdenop): check for missing setting or empty string
 
     QStringList args;
 
@@ -470,15 +443,19 @@ void MainWindow::on_actionAbout_triggered() {
   aboutMB.exec();
 }
 
+void MainWindow::on_actionConfiguration_triggered() {
+  runSettingsDialog = new SettingsDialog(this);
+  connect(runSettingsDialog, SIGNAL(configuration_changed()), this, SLOT(feature_limits()));
+  runSettingsDialog->exec();
+}
 
 void MainWindow::on_actionAbout_QT_triggered() {
   QMessageBox::aboutQt(this, tr("About Qt"));
 }
 
 void MainWindow::readSettings() {
-   // not implemented yet
-   ui->actionConfiguration->setVisible(false);
-   ui->checkBoxOpen->setVisible(false);
+  // not implemented yet
+  ui->checkBoxOpen->setVisible(false);
 
   // default values
   ui->comboBoxForm->setCurrentIndex(0);
@@ -489,6 +466,9 @@ void MainWindow::readSettings() {
 
   QSettings settings(QSettings::IniFormat, QSettings::UserScope,
                      Organization, ProjectName);
+
+  if (!settings.contains("OCR/program"))
+    on_actionConfiguration_triggered();
 
   settings.beginGroup("mainWindow");
   restoreGeometry(settings.value("geometry").toByteArray());
@@ -501,9 +481,8 @@ void MainWindow::readSettings() {
   ui->checkBoxOpen->setChecked(settings.value("Parameters/output_open").toBool());
   int langindex = ui->comboBoxLang->findData(settings.value("Parameters/lang").toString());
   ui->comboBoxLang->setCurrentIndex(langindex);
-  ui->comboBoxForm->setCurrentIndex(settings.value("Parameters/format").toInt());
-  ui->comboBoxPSM->setCurrentIndex(settings.value("Parameters/psm").toInt());
 
+  feature_limits();
 }
 
 void MainWindow::writeSettings() {
@@ -532,3 +511,16 @@ void MainWindow::closeEvent(QCloseEvent* event) {
     writeSettings();
     event->accept();
 }
+
+void MainWindow::feature_limits() {
+  QSettings settings(QSettings::IniFormat, QSettings::UserScope,
+                     Organization, ProjectName);
+  if (settings.value("OCR/version").toString() == "3.01") {
+      ui->comboBoxPSM->setEnabled(true);
+  } else {
+      ui->comboBoxPSM->setEnabled(false);
+   }
+
+  ui->comboBoxForm->setCurrentIndex(settings.value("Parameters/format").toInt());
+  ui->comboBoxPSM->setCurrentIndex(settings.value("Parameters/psm").toInt());
+  }
