@@ -33,6 +33,9 @@ int main(int argc, char *argv[]) {
 
   QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
   QString locale = QLocale::system().name().section('_', 0, 0);
+  /*QTranslator trans2(0);
+      trans2.load("qt_sk", ".");
+  app.installTranslator(&trans2);*/
   QTranslator translator;
   translator.load(QString("qt4tesseract_") + locale,
                           ":/Languages/translations");

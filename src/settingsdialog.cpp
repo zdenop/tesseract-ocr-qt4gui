@@ -96,7 +96,7 @@ void SettingsDialog::on_pb_check_clicked() {
       lbl_VERSION->setText("3.01");
       return;
     } else if (line.contains(
-                   QString("Usage:tesseract imagename outputbase [-l lang] [configfile").arg(ocrCmd))) {
+                   QString("Usage:%1 imagename outputbase [-l lang] [configfile").arg(ocrCmd))) {
       lbl_VERSION->setText("3.00");
       return;
     } else if (line.contains(

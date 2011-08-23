@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>522</width>
-    <height>240</height>
+    <height>300</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>522</width>
-    <height>240</height>
+    <height>300</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>522</width>
-    <height>240</height>
+    <height>300</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -191,6 +191,13 @@
       </property>
      </widget>
     </item>
+    <item row="7" column="0" colspan="6">
+     <widget class="QPlainTextEdit" name="tb_Log">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -199,7 +206,7 @@
      <x>0</x>
      <y>0</y>
      <width>522</width>
-     <height>23</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -219,7 +226,6 @@
    <addaction name="menuFile"/>
    <addaction name="menuAbout"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionConfiguration">
    <property name="text">
     <string>Configuration</string>

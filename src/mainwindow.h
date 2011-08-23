@@ -39,7 +39,7 @@
 #include <QtGui/QStyleFactory>
 #include <QSortFilterProxyModel>
 
-#include "src/settingsdialog.h"
+#include "settingsdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -60,6 +60,9 @@ class MainWindow : public QMainWindow {
   private:
     Ui::MainWindow *ui;
     QProcess process;
+    QList<QString> getLangugagelist();
+    QString getLangName(QString lang);
+    void initLangs();
     void readSettings();
     void writeSettings();
 
@@ -71,7 +74,6 @@ class MainWindow : public QMainWindow {
     void on_pushButtonIn_clicked();
     void on_pushButtonOut_clicked();
 
-    QList<QString> getLangugagelist();
     void processErrors();
     void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void processError(QProcess::ProcessError error);
