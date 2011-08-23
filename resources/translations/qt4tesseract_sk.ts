@@ -188,7 +188,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="398"/>
         <source>OCR program started...</source>
-        <translation>OCR program bol spustení…</translation>
+        <translation>OCR program bol spustený…</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="415"/>

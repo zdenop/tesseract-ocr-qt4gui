@@ -28,16 +28,14 @@ MainWindow::MainWindow(QWidget *parent) :
   ui(new Ui::MainWindow) {
   ui->setupUi(this);
   // workaround for buttonBox translation
-  ui->buttonBox->clear();
-  ui->buttonBox->addButton("OK", QDialogButtonBox::AcceptRole)->setText( "&Run" );
-  ui->buttonBox->addButton("Close", QDialogButtonBox::RejectRole)->setText( tr( "&Close" ) );
+  ui->buttonBox->button(QDialogButtonBox::Ok)->setText( "&Run" );
+  ui->buttonBox->button(QDialogButtonBox::Close)->setText( "&Close" );
 
   // TODO(zdenop): get psm from cmd line ;-)
 
   setWindowTitle(QString(tr("QT4 Tesseract OCR GUI %1")).arg(ProductVersion));
   setWindowIcon(QIcon(":/Images/images/qt4tesseract.svg"));
 
-  readSettings();
   initForm();
 }
 
@@ -314,7 +312,6 @@ QList<QString> MainWindow::getLangugagelist() {
   for (int i = 0; i < lines.size(); ++i) {
     line = lines.at(i);
     if (line.contains("_ICQ_")) {
-      qDebug() << line;
       // tesseract 3.01
       // Error opening data file /usr/local/share/tessdata/_ICQ_.traineddata
       langFile = line.replace("Error opening data file ", "");
@@ -326,17 +323,24 @@ QList<QString> MainWindow::getLangugagelist() {
       langFile = langFile.replace("Unable to load unicharset file ", "");
     }
   }
-  qDebug() << langFile;
+
+  if (langFile == "")
+    ui->tb_Log->appendHtml("<font color=red><b>" +
+        tr("Unexpexted error: tesseract did not produced expected information!")
+        + "</b></font>");
+
   // TODO(zdenop): Get TESSDATA_PREFIX from enviroment
   QFileInfo fi(langFile);
   QString tessdataPath = fi.absolutePath();
   QString extention = fi.suffix();
-  qDebug() <<"tessdataPath:" << tessdataPath;
-  qDebug() <<"extention:" << extention;
 
   QDir dir(tessdataPath);
-  if (!dir.exists())
-    qWarning("Cannot find the tessdata directory");
+  if (!dir.exists()) {
+    QMessageBox msgBox;
+    msgBox.setText(tr("Cannot find the tessdata directory!\n") +
+                tr("Please check your configuration or tesseract instalation"));
+    msgBox.exec();
+    }
 
   QString filter = "*." + extention;
   QStringList filters;
@@ -380,13 +384,12 @@ void MainWindow::on_buttonBox_accepted() {
   args << "-l" << lang;
 
   if (ui->comboBoxPSM->isEnabled()) {
-    QString format;
     int PSM = ui->comboBoxPSM->currentIndex();
-    if (ui->comboBoxForm->currentIndex() == 1)
-      format = "hocr";
-    else
-      format = "";
-    args  << "-psm" << QString::number(PSM) << format;
+    args  << "-psm" << QString::number(PSM);
+  }
+
+  if (ui->comboBoxForm->currentIndex() == 1) {
+    args << "hocr";
   }
 
   if (!settings.value("OCR/sys_prefix").toBool()) {
@@ -396,13 +399,19 @@ void MainWindow::on_buttonBox_accepted() {
     }
 
   ui->tb_Log->appendHtml(tr("OCR program started..."));
+  ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
   process.start(ocrCmd, args);
 }
 
 void MainWindow::processErrors() {
   QByteArray newData = process.readAllStandardError();
   QString text = QString::fromLocal8Bit(newData);
-  ui->tb_Log->appendHtml(text);
+  QString line;
+  QStringList lines = text.split("\n");
+  for (int i = 0; i < lines.size(); ++i) {
+    line = lines.at(i);
+    ui->tb_Log->appendHtml(lines.at(i));
+  }
 }
 
 void MainWindow::processFinished(int exitCode,
@@ -534,11 +543,12 @@ void MainWindow::readSettings() {
         settings.value("Parameters/output_name").toBool());
   ui->checkBoxOpen->setChecked(
         settings.value("Parameters/output_open").toBool());
+
+  feature_limits();
+
   int langindex = ui->comboBoxLang->findData(
         settings.value("Parameters/lang").toString());
   ui->comboBoxLang->setCurrentIndex(langindex);
-
-  feature_limits();
 }
 
 void MainWindow::writeSettings() {
@@ -584,9 +594,8 @@ void MainWindow::feature_limits() {
 
   // hocr/html is supported from 3.01
   if (settings.value("OCR/version").toFloat() > 3.00) {
-      ui->comboBoxForm->setMaxVisibleItems(1);
+      ui->comboBoxForm->setMaxVisibleItems(2);
   } else {
-      ui->comboBoxForm->setMaxVisibleItems(0);
+      ui->comboBoxForm->setMaxVisibleItems(1);
   }
-
 }

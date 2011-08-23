@@ -39,12 +39,12 @@ void SettingsDialog::saveSettings() {
   QSettings settings(QSettings::IniFormat, QSettings::UserScope,
                      Organization, ProjectName);
 
+  on_pb_check_clicked();
+
   settings.setValue("OCR/program", ln_prog->text());
   settings.setValue("OCR/version", lbl_VERSION->text());
   settings.setValue("OCR/prefix", ln_prefix->text());
   settings.setValue("OCR/sys_prefix", cb_prefix->isChecked());
-
-  on_pb_check_clicked();
 
   emit configuration_changed();
   emit accept();
