@@ -35,6 +35,9 @@
    </item>
    <item row="0" column="1" colspan="2">
     <widget class="QLineEdit" name="ln_prog">
+     <property name="inputMask">
+      <string notr="true"/>
+     </property>
      <property name="text">
       <string>tesseract</string>
      </property>
@@ -67,11 +70,7 @@
       <bool>false</bool>
      </property>
      <property name="toolTip">
-      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Put here path to you tessdata directory. E.g. if you tessdata directory is &amp;quot;C:\Program Files\Tesseract-OCR\tessdata&amp;quot; put here &amp;quot;C:\Program Files\Tesseract-OCR\&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;p&gt;Put here path to your tessdata directory. E.g. if your tessdata directory is &amp;quot;C:\Program Files\Tesseract-OCR\tessdata&amp;quot; put here &amp;quot;C:\Program Files\Tesseract-OCR\&amp;quot;.&lt;/p&gt;</string>
      </property>
      <property name="text">
       <string/>
@@ -98,7 +97,7 @@ p, li { white-space: pre-wrap; }
    <item row="4" column="0">
     <widget class="QLabel" name="lbl_prefix">
      <property name="text">
-      <string>TESSDATA_PREFIX:</string>
+      <string notr="true">TESSDATA_PREFIX:</string>
      </property>
     </widget>
    </item>
