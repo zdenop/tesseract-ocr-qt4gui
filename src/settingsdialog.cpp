@@ -25,7 +25,10 @@
 SettingsDialog::SettingsDialog(QWidget* parent) : QDialog(parent) {
   setFixedSize(420, 370);
   setupUi(this);
-  //setWindowTitle(tr("%1 :: Configuration...").arg(ProjectName));
+
+  // workaround for buttonBox translation
+  buttonBox->button(QDialogButtonBox::Save)->setText(tr("&Save"));
+  buttonBox->button(QDialogButtonBox::Cancel)->setText(tr("&Cancel"));
 
   initSettings();
 
@@ -95,9 +98,15 @@ void SettingsDialog::on_pb_check_clicked() {
     if (line.contains("tesseract 3.01")) {
       lbl_VERSION->setText("3.01");
       return;
-    } else if (line.contains(
-                   QString("Usage:%1 imagename outputbase [-l lang] [configfile").arg(ocrCmd))) {
+    } else if (line.contains("tesseract 3.00")) {
       lbl_VERSION->setText("3.00");
+      // linux 3.00 version
+      return;
+    } else if (line.contains(
+                  QString("Usage:%1 imagename outputbase [-l lang] [configfile")
+                 .arg(ocrCmd))) {
+      lbl_VERSION->setText("3.00");
+      // windows 3.00 version
       return;
     } else if (line.contains(
                    QString("%1:Error:Usage:%1 imagename outputbase [-l lang] [configfile").arg(ocrCmd))) {

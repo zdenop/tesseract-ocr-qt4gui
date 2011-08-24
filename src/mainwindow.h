@@ -78,6 +78,9 @@ class MainWindow : public QMainWindow {
     void processFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void processError(QProcess::ProcessError error);
     void feature_limits();
+    void setOutName(bool status);
+    void setOutExt(QString filename);
+    void formatChanged(int);
 };
 
 #endif  // SRC_MAINWINDOW_H_

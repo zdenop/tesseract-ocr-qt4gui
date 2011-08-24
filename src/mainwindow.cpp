@@ -27,9 +27,10 @@ MainWindow::MainWindow(QWidget *parent) :
   QMainWindow(parent),
   ui(new Ui::MainWindow) {
   ui->setupUi(this);
+
   // workaround for buttonBox translation
-  ui->buttonBox->button(QDialogButtonBox::Ok)->setText( "&Run" );
-  ui->buttonBox->button(QDialogButtonBox::Close)->setText( "&Close" );
+  ui->buttonBox->button(QDialogButtonBox::Ok)->setText(tr("&Run"));
+  ui->buttonBox->button(QDialogButtonBox::Close)->setText(tr("&Close"));
 
   // TODO(zdenop): get psm from cmd line ;-)
 
@@ -37,6 +38,10 @@ MainWindow::MainWindow(QWidget *parent) :
   setWindowIcon(QIcon(":/Images/images/qt4tesseract.svg"));
 
   initForm();
+  connect(ui->checkBoxName, SIGNAL(toggled(bool)), this,
+          SLOT(setOutName(bool)));
+  connect(ui->comboBoxForm, SIGNAL(currentIndexChanged(int)), this,
+          SLOT(formatChanged(int)));
 }
 
 MainWindow::~MainWindow() {
@@ -233,6 +238,8 @@ QString MainWindow::getLangName(QString lang) {
     map["yor"] = QObject::tr("Yoruba");
     map["zha"] = QObject::tr("Zhuang, Chuang");
     map["zul"] = QObject::tr("Zulu");
+
+    // custom definition
     map["chi_tra"] = QObject::tr("Chinese (Traditional)");
     map["chi_sim"] = QObject::tr("Chinese (Simplified)");
     map["dan-frak"] = QObject::tr("Danish (Fraktur)");
@@ -278,8 +285,6 @@ void MainWindow::initForm() {
           this, SLOT(processFinished(int, QProcess::ExitStatus)));
   connect(&process, SIGNAL(error(QProcess::ProcessError)),
           this, SLOT(processError(QProcess::ProcessError)));
-  // TODO(zdenop): change of combobox or lineedit after init
-  // emit signal for saving settings
 }
 
 QList<QString> MainWindow::getLangugagelist() {
@@ -329,7 +334,6 @@ QList<QString> MainWindow::getLangugagelist() {
         tr("Unexpexted error: tesseract did not produced expected information!")
         + "</b></font>");
 
-  // TODO(zdenop): Get TESSDATA_PREFIX from enviroment
   QFileInfo fi(langFile);
   QString tessdataPath = fi.absolutePath();
   QString extention = fi.suffix();
@@ -436,8 +440,14 @@ void MainWindow::processError(QProcess::ProcessError error) {
 void MainWindow::on_pushButtonIn_clicked() {
   QString filetype = "Image files (*.bmp *.png *.jpeg *.jpg *.tif *.tiff);;";
   filetype += "All files (*.*)";
-  QString last_path = QDir::homePath();
-  // TODO(zdenop): last_path,
+
+  QString last_path;
+  QSettings settings(QSettings::IniFormat, QSettings::UserScope,
+                     Organization, ProjectName);
+  if (settings.contains("mainWindow/last_path"))
+    last_path = settings.value("mainWindow/last_path").toString();
+  else
+    last_path = QDir::homePath();
 
   QString imageFile = QFileDialog::getOpenFileName(
                         this,
@@ -446,21 +456,30 @@ void MainWindow::on_pushButtonIn_clicked() {
                         filetype);
 
   ui->lineEditIn->setText(imageFile);
+  setOutName(ui->checkBoxName->isChecked());
 
-  if (ui->checkBoxName->isChecked()) {
-    int lastindex = imageFile.lastIndexOf(".");
-    QString outName = imageFile.left(lastindex);
-    if (ui->comboBoxForm->currentIndex() == 1)
-      outName.append(".html");
-    else
-      outName.append(".txt");
-    ui->lineEditOut->setText(outName);
-  }
+  QString filePath = QFileInfo(imageFile).absolutePath();
+  settings.setValue("mainWindow/last_path", filePath);
 }
 
 void MainWindow::on_pushButtonOut_clicked() {
-  // TODO(zdenop): check box -> select base on input field
+  QSettings settings(QSettings::IniFormat, QSettings::UserScope,
+                     Organization, ProjectName);
   QString currentFileName = ui->lineEditOut->text();
+
+  if (currentFileName == "") {
+    int lastindex = ui->lineEditIn->text().lastIndexOf(".");
+    currentFileName = ui->lineEditIn->text().left(lastindex);
+   }
+
+  if (currentFileName == "") {
+    if (settings.contains("mainWindow/last_path"))
+      currentFileName = settings.value("mainWindow/last_path").toString()
+          + QDir::separator() + "output.txt";
+    else
+      currentFileName = QDir::homePath() + QDir::separator() + "output.txt";
+    }
+
   QString fileName = QFileDialog::getSaveFileName(this,
                      tr("Save to file..."),
                      currentFileName,
@@ -470,13 +489,11 @@ void MainWindow::on_pushButtonOut_clicked() {
     return;
 
   ui->lineEditOut->setText(fileName);
+  ui->checkBoxName->setChecked(false);
+  setOutExt(fileName);
 
-  int lastindex = fileName.length() - fileName.lastIndexOf(".");
-  QString fileExt = fileName.right(lastindex);
-  if (fileExt == ".txt")
-    ui->comboBoxForm->setCurrentIndex(0);
-  else if (fileExt == ".html")
-    ui->comboBoxForm->setCurrentIndex(1);
+  QString filePath = QFileInfo(fileName).absolutePath();
+  settings.setValue("mainWindow/last_path", filePath);
 }
 
 void MainWindow::on_actionAbout_triggered() {
@@ -523,8 +540,6 @@ void MainWindow::readSettings() {
   ui->comboBoxForm->setCurrentIndex(0);
   ui->comboBoxPSM->setCurrentIndex(3);
   ui->checkBoxName->setChecked(true);
-
-  // TODO(zdenop): last_path ocr_command
 
   QSettings settings(QSettings::IniFormat, QSettings::UserScope,
                      Organization, ProjectName);
@@ -599,3 +614,23 @@ void MainWindow::feature_limits() {
       ui->comboBoxForm->setMaxVisibleItems(1);
   }
 }
+
+void MainWindow::setOutName(bool status) {
+  if (status) {
+    setOutExt(ui->lineEditIn->text());
+  }
+}
+
+void MainWindow::setOutExt(QString filename) {
+  int lastindex = filename.lastIndexOf(".");
+  QString outName = filename.left(lastindex);
+  if (ui->comboBoxForm->currentIndex() == 1)
+    outName.append(".html");
+  else
+    outName.append(".txt");
+  ui->lineEditOut->setText(outName);
+  }
+
+void MainWindow::formatChanged(int) {
+  setOutExt(ui->lineEditOut->text());
+  }
