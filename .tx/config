@@ -1,0 +1,12 @@
+[main]
+host = https://www.transifex.net
+
+[qt4-tesseract.qt4tesseract_ents]
+file_filter = resources\translations\qt4tesseract_<lang>.ts
+host = https://www.transifex.net
+source_file = resources\translations\qt4tesseract_en.ts
+source_lang = en
+trans.cs = resources\translations\qt4tesseract_cs.ts
+trans.et = resources\translations\qt4tesseract_et.ts
+trans.sk = resources\translations\qt4tesseract_sk.ts
+

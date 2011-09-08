@@ -26,12 +26,24 @@ CODECFORTR = UTF-8
 win32 {
   RC_FILE = resources/qt4tesseract.rc
   #Release:DEFINES += NO_CONSOLE
-  updateqm.input = TRANSLATIONS
-  updateqm.output = resources/translations/${QMAKE_FILE_BASE}.qm
-  updateqm.commands = $$QMAKE_LRELEASE \
-      -silent \
-      ${QMAKE_FILE_IN} \
-      -qm \
-      resources/translations/${QMAKE_FILE_BASE}.qm
-  updateqm.CONFIG += no_link
 }
+
+#release translations
+isEmpty(QMAKE_LRELEASE) {
+    win32:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]\lrelease.exe
+    else:QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
+    unix {
+        !exists($$QMAKE_LRELEASE) { QMAKE_LRELEASE = lrelease-qt4 }
+    } else {
+        !exists($$QMAKE_LRELEASE) { QMAKE_LRELEASE = lrelease }
+    }
+}
+
+lrelease.input = TRANSLATIONS
+lrelease.output = resources/translations/${QMAKE_FILE_BASE}.qm
+lrelease.commands = $$QMAKE_LRELEASE -silent ${QMAKE_FILE_IN} -qm resources/translations/${QMAKE_FILE_BASE}.qm
+lrelease.CONFIG += no_link target_predeps
+QMAKE_EXTRA_COMPILERS += lrelease
+
+#for add a dependency
+#lrelease.depends = lupdate
