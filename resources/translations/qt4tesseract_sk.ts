@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="sk">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="sk" version="2.0">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>MainWindow</name>
     <message>
         <location filename="../../ui/mainwindow.ui" line="26"/>
         <source>MainWindow</source>
-        <translation>MainWindow</translation>
+        <translation>Hlavné okno</translation>
     </message>
     <message>
         <location filename="../../ui/mainwindow.ui" line="33"/>
@@ -33,7 +31,7 @@
     <message>
         <location filename="../../ui/mainwindow.ui" line="74"/>
         <source>Page segmenation:</source>
-        <translation>Segmentácia strany:</translation>
+        <translation>Členenie strany:</translation>
     </message>
     <message>
         <location filename="../../ui/mainwindow.ui" line="91"/>
@@ -146,8 +144,9 @@
         <translation>O QT</translation>
     </message>
     <message>
-        <source>QT4 tesseract-ocr GUI %1</source>
-        <translation type="obsolete">QT4 tesseract-OCR klient %1</translation>
+        <location filename="../../src/mainwindow.cpp" line="33"/>
+        <source>&amp;Close</source>
+        <translation>&amp;Zavrieť</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="37"/>
@@ -155,111 +154,103 @@
         <translation>QT4 Tesseract OCR GUI %1</translation>
     </message>
     <message>
-        <source>OCR program is running...</source>
-        <translation type="obsolete">Prebieha OCR...</translation>
+        <location filename="../../src/mainwindow.cpp" line="334"/>
+        <source>Unexpexted error: tesseract did not produced expected information!</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="411"/>
+        <location filename="../../src/mainwindow.cpp" line="344"/>
+        <source>Cannot find the tessdata directory!
+</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="345"/>
+        <source>Please check your configuration or tesseract instalation</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="424"/>
         <source>OCR program crashed</source>
         <translation>OCR program spadol</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="413"/>
+        <location filename="../../src/mainwindow.cpp" line="426"/>
         <source>OCR program failed</source>
         <translation>OCR program zlyhal</translation>
     </message>
     <message>
-        <source>File created</source>
-        <translation type="obsolete">Súbor bol vytvorený.</translation>
-    </message>
-    <message>
-        <source>Ok</source>
-        <translation type="obsolete">Ok</translation>
-    </message>
-    <message>
-        <source>Close</source>
-        <translation type="obsolete">Zatvoriť</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="33"/>
-        <source>&amp;Close</source>
-        <translation>&amp;Zatvoriť</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="398"/>
-        <source>OCR program started...</source>
-        <translation>OCR program bol spustený…</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="415"/>
-        <source>&lt;font color=green&gt;&lt;b&gt;Ouput created&lt;/b&gt;&lt;/font&gt;</source>
-        <translation>&lt;font color=green&gt;&lt;b&gt;Výstup bol vytvorený&lt;/b&gt;&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="422"/>
+        <location filename="../../src/mainwindow.cpp" line="435"/>
         <source>OCR program not found</source>
         <translation>OCR program nebol nájdený</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="424"/>
-        <source>&lt;font color=red&gt;&lt;b&gt;Execute error (%1)&lt;/b&gt;&lt;/font&gt;</source>
-        <translation>&lt;font color=red&gt;&lt;b&gt;Chyba pri suptení programu (%1)&lt;/b&gt;&lt;/font&gt;</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="435"/>
+        <location filename="../../src/mainwindow.cpp" line="454"/>
         <source>Select image file...</source>
         <translation>Vyberte súbor s obrázkom…</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="456"/>
+        <location filename="../../src/mainwindow.cpp" line="484"/>
         <source>Save to file...</source>
         <translation>Uložiť do súboru…</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="458"/>
+        <location filename="../../src/mainwindow.cpp" line="486"/>
         <source>Text or html files (*.txt *.html);;All files (*)</source>
         <translation>Text alebo HTML súbory (*.txt *.html);;Všetky súbory (*)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="479"/>
+        <location filename="../../src/mainwindow.cpp" line="505"/>
         <source>&lt;h1&gt;QT4 Tesseract OCR GUI&lt;/h1&gt;</source>
         <translation>&lt;h1&gt;QT4 Tesseract OCR GUI&lt;/h1&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="489"/>
+        <location filename="../../src/mainwindow.cpp" line="515"/>
         <source>&lt;p&gt;Translation is done on &lt;a href=&quot;https://www.transifex.net/projects/p/qt4-tesseract&quot;&gt;Transifex.net&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Preklad bol urobený pomocou &lt;a href=&quot;https://www.transifex.net/projects/p/qt4-tesseract&quot;&gt;Transifex.net&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <source>&lt;h1&gt;QT4 tesseract-ocr GUI&lt;/h1&gt;</source>
-        <translation type="obsolete">&lt;h1&gt;QT4 tesseract-ocr GUI&lt;/h1&gt;</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="481"/>
+        <location filename="../../src/mainwindow.cpp" line="507"/>
         <source>&lt;p&gt;This is a simple GUI for tesseract-ocr&lt;/p&gt;</source>
         <translation>&lt;p&gt;Toto je jednoduché grafické rozhranie pre tesseract-ocr&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="482"/>
+        <location filename="../../src/mainwindow.cpp" line="32"/>
+        <source>&amp;Run</source>
+        <translation>Sp&amp;ustiť</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="405"/>
+        <source>OCR program started...</source>
+        <translation>OCR program bol spustený...</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="428"/>
+        <source>&lt;font color=green&gt;&lt;b&gt;Ouput created&lt;/b&gt;&lt;/font&gt;</source>
+        <translation>&lt;b&gt;&lt;font color=green&gt;Výstupný súbor bol vytvorený&lt;/font&gt;&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="437"/>
+        <source>&lt;font color=red&gt;&lt;b&gt;Execute error (%1)&lt;/b&gt;&lt;/font&gt;</source>
+        <translation>&lt;b&gt;&lt;font color=red&gt;Chyba pri spustení programu (%1)&lt;/font&gt;&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="508"/>
         <source>&lt;p&gt;Project page: &lt;a href=%1&gt;%2&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Stránka projektu: &lt;a href=%1&gt;%2&lt;/a&gt;&lt;/p</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="485"/>
+        <location filename="../../src/mainwindow.cpp" line="511"/>
         <source>Copyright 2011 Zdenko Podobný&lt;/p&gt;</source>
         <translation>Copyright 2011 Zdenko Podobný&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="486"/>
+        <location filename="../../src/mainwindow.cpp" line="512"/>
         <source>&lt;p&gt;This software is released under &lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tento softvér je uvoľnený pod &lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache License 2.0&lt;/a&gt; &lt;/p&gt;</translation>
     </message>
     <message>
-        <source>About application</source>
-        <translation type="obsolete">O aplikácii</translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="506"/>
+        <location filename="../../src/mainwindow.cpp" line="532"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
@@ -267,952 +258,952 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="54"/>
+        <location filename="../../src/mainwindow.cpp" line="57"/>
         <source>Abkhaz</source>
         <translation>Abkhaz</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="55"/>
+        <location filename="../../src/mainwindow.cpp" line="58"/>
         <source>Afar</source>
         <translation>Afar</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="56"/>
+        <location filename="../../src/mainwindow.cpp" line="59"/>
         <source>Afrikaans</source>
         <translation>Afrikánčina</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="57"/>
+        <location filename="../../src/mainwindow.cpp" line="60"/>
         <source>Akan</source>
         <translation>Akan</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="58"/>
+        <location filename="../../src/mainwindow.cpp" line="61"/>
         <source>Albanian</source>
         <translation>Albánsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="59"/>
+        <location filename="../../src/mainwindow.cpp" line="62"/>
         <source>Amharic</source>
         <translation>Amharic</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="60"/>
+        <location filename="../../src/mainwindow.cpp" line="63"/>
         <source>Arabic</source>
         <translation>Arabčina</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="61"/>
+        <location filename="../../src/mainwindow.cpp" line="64"/>
         <source>Aragonese</source>
-        <translation type="unfinished"></translation>
+        <translation>Aragónsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="62"/>
+        <location filename="../../src/mainwindow.cpp" line="65"/>
         <source>Armenian</source>
         <translation>Arménsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="63"/>
-        <source>Assamese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="64"/>
-        <source>Avaric</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="65"/>
-        <source>Avestan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="66"/>
-        <source>Aymara</source>
-        <translation type="unfinished"></translation>
+        <source>Assamese</source>
+        <translation>Assamsky</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="67"/>
+        <source>Avaric</source>
+        <translation>Avarsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="68"/>
+        <source>Avestan</source>
+        <translation>Avesta</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="69"/>
+        <source>Aymara</source>
+        <translation>Aymarsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="70"/>
         <source>Azerbaijani</source>
         <translation>Azerbajdžanský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="68"/>
-        <source>Bambara</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="69"/>
-        <source>Bashkir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="70"/>
-        <source>Basque</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="71"/>
+        <source>Bambara</source>
+        <translation>Bambarsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="72"/>
+        <source>Bashkir</source>
+        <translation>Baškirsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="73"/>
+        <source>Basque</source>
+        <translation>Baskitsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="74"/>
         <source>Belarusian</source>
         <translation>Bieloruský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="72"/>
+        <location filename="../../src/mainwindow.cpp" line="75"/>
         <source>Bengali</source>
         <translation>Bengálsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="73"/>
+        <location filename="../../src/mainwindow.cpp" line="76"/>
         <source>Bihari</source>
-        <translation type="unfinished"></translation>
+        <translation>Bihársky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="74"/>
+        <location filename="../../src/mainwindow.cpp" line="77"/>
         <source>Bislama</source>
-        <translation type="unfinished"></translation>
+        <translation>Bislámsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="75"/>
+        <location filename="../../src/mainwindow.cpp" line="78"/>
         <source>Bosnian</source>
         <translation>Bosniansky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="76"/>
+        <location filename="../../src/mainwindow.cpp" line="79"/>
         <source>Breton</source>
-        <translation type="unfinished"></translation>
+        <translation>Bretónsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="77"/>
+        <location filename="../../src/mainwindow.cpp" line="80"/>
         <source>Bulgarian</source>
         <translation>Bulharský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="78"/>
-        <source>Burmese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="79"/>
-        <source>Catalan; Valencian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="80"/>
-        <source>Chamorro</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="81"/>
-        <source>Chechen</source>
-        <translation type="unfinished"></translation>
+        <source>Burmese</source>
+        <translation>Barmsky</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="82"/>
-        <source>Chichewa; Chewa; Nyanja</source>
-        <translation type="unfinished"></translation>
+        <source>Catalan; Valencian</source>
+        <translation>Katalánsky; valenciánsky</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="83"/>
+        <source>Chamorro</source>
+        <translation>Čamorsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="84"/>
+        <source>Chechen</source>
+        <translation>Čečensky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="85"/>
+        <source>Chichewa; Chewa; Nyanja</source>
+        <translation>Chichewa; Chewa; Nyanja</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="86"/>
         <source>Chinese</source>
         <translation>Číňsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="84"/>
-        <source>Chuvash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="85"/>
-        <source>Cornish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="86"/>
-        <source>Corsican</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="87"/>
-        <source>Cree</source>
-        <translation type="unfinished"></translation>
+        <source>Chuvash</source>
+        <translation>Chuvash</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="88"/>
-        <source>Croatian</source>
-        <translation type="unfinished"></translation>
+        <source>Cornish</source>
+        <translation>Cornish</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="89"/>
+        <source>Corsican</source>
+        <translation>Korzitský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="90"/>
+        <source>Cree</source>
+        <translation>Cree</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="91"/>
+        <source>Croatian</source>
+        <translation>Chorvátsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="92"/>
         <source>Czech</source>
         <translation>Český</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="90"/>
+        <location filename="../../src/mainwindow.cpp" line="93"/>
         <source>Danish</source>
         <translation>Dánsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="91"/>
+        <location filename="../../src/mainwindow.cpp" line="94"/>
         <source>Divehi; Dhivehi; Maldivian;</source>
-        <translation type="unfinished"></translation>
+        <translation>Divehi; Dhivehi; Maldivian;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="92"/>
+        <location filename="../../src/mainwindow.cpp" line="95"/>
         <source>Dutch</source>
         <translation>Holandský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="93"/>
+        <location filename="../../src/mainwindow.cpp" line="96"/>
         <source>Dzongkha</source>
-        <translation type="unfinished"></translation>
+        <translation>Dzongkhsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="94"/>
+        <location filename="../../src/mainwindow.cpp" line="97"/>
         <source>English</source>
         <translation>Anglický</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="95"/>
+        <location filename="../../src/mainwindow.cpp" line="98"/>
         <source>Esperanto</source>
         <translation>Esperanto</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="96"/>
+        <location filename="../../src/mainwindow.cpp" line="99"/>
         <source>Estonian</source>
         <translation>Estónsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="97"/>
-        <source>Ewe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="98"/>
-        <source>Faroese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="99"/>
-        <source>Fijian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="100"/>
+        <source>Ewe</source>
+        <translation>Ewesky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="101"/>
+        <source>Faroese</source>
+        <translation>Faersky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="102"/>
+        <source>Fijian</source>
+        <translation>Fidži</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="103"/>
         <source>Finnish</source>
         <translation>Fínsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="101"/>
+        <location filename="../../src/mainwindow.cpp" line="104"/>
         <source>French</source>
         <translation>Francúzsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="102"/>
-        <source>Fula; Fulah; Pulaar; Pular</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="103"/>
-        <source>Galician</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="104"/>
-        <source>Georgian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="105"/>
+        <source>Fula; Fulah; Pulaar; Pular</source>
+        <translation>Fula; Fulah; Pulaar; Pular</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="106"/>
+        <source>Galician</source>
+        <translation>Galíčtina</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="107"/>
+        <source>Georgian</source>
+        <translation>Gruzínsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="108"/>
         <source>German</source>
         <translation>Nemecký</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="106"/>
+        <location filename="../../src/mainwindow.cpp" line="109"/>
         <source>Greek, Modern</source>
         <translation>Gréčtina, moderná</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="107"/>
-        <source>Guaraní</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="108"/>
-        <source>Gujarati</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="109"/>
-        <source>Haitian; Haitian Creole</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="110"/>
-        <source>Hausa</source>
-        <translation type="unfinished"></translation>
+        <source>Guaraní</source>
+        <translation>Guaraní</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="111"/>
-        <source>Hebrew (modern)</source>
-        <translation type="unfinished"></translation>
+        <source>Gujarati</source>
+        <translation>Gujarati</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="112"/>
-        <source>Herero</source>
-        <translation type="unfinished"></translation>
+        <source>Haitian; Haitian Creole</source>
+        <translation>Hajtský, hajtská kreolština</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="113"/>
-        <source>Hindi</source>
-        <translation type="unfinished"></translation>
+        <source>Hausa</source>
+        <translation>Hausa</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="114"/>
-        <source>Hiri Motu</source>
-        <translation type="unfinished"></translation>
+        <source>Hebrew (modern)</source>
+        <translation>Hebrejský (moderný)</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="115"/>
+        <source>Herero</source>
+        <translation>Herérsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="116"/>
+        <source>Hindi</source>
+        <translation>Hindský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="117"/>
+        <source>Hiri Motu</source>
+        <translation>Hiri Motu</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="118"/>
         <source>Hungarian</source>
         <translation>Maďarský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="116"/>
-        <source>Interlingua</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="117"/>
-        <source>Indonesian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="118"/>
-        <source>Interlingue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="119"/>
-        <source>Irish</source>
-        <translation type="unfinished"></translation>
+        <source>Interlingua</source>
+        <translation>Interlingua</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="120"/>
-        <source>Igbo</source>
-        <translation type="unfinished"></translation>
+        <source>Indonesian</source>
+        <translation>Indonézsky</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="121"/>
-        <source>Inupiaq</source>
-        <translation type="unfinished"></translation>
+        <source>Interlingue</source>
+        <translation>Interlingue</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="122"/>
-        <source>Ido</source>
-        <translation type="unfinished"></translation>
+        <source>Irish</source>
+        <translation>Írsky</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="123"/>
-        <source>Icelandic</source>
-        <translation type="unfinished"></translation>
+        <source>Igbo</source>
+        <translation>Igbo</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="124"/>
-        <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <source>Inupiaq</source>
+        <translation>Inupiaq</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="125"/>
-        <source>Inuktitut</source>
-        <translation type="unfinished"></translation>
+        <source>Ido</source>
+        <translation>Ido</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="126"/>
+        <source>Icelandic</source>
+        <translation>Islandsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="127"/>
+        <source>Italian</source>
+        <translation>Taliansky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="128"/>
+        <source>Inuktitut</source>
+        <translation>Inuktitut</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="129"/>
         <source>Japanese</source>
         <translation>Japonský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="127"/>
+        <location filename="../../src/mainwindow.cpp" line="130"/>
         <source>Javanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Jávsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="128"/>
+        <location filename="../../src/mainwindow.cpp" line="131"/>
         <source>Kalaallisut, Greenlandic</source>
-        <translation type="unfinished"></translation>
+        <translation>Grónsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="129"/>
+        <location filename="../../src/mainwindow.cpp" line="132"/>
         <source>Kannada</source>
         <translation>Kannada</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="130"/>
-        <source>Kanuri</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="131"/>
-        <source>Kashmiri</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="132"/>
-        <source>Kazakh</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="133"/>
+        <source>Kanuri</source>
+        <translation>Kanuri</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="134"/>
+        <source>Kashmiri</source>
+        <translation>Kašmírsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="135"/>
+        <source>Kazakh</source>
+        <translation>Kazachský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="136"/>
         <source>Khmer</source>
         <translation>Khmérsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="134"/>
-        <source>Kikuyu, Gikuyu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="135"/>
-        <source>Kinyarwanda</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="136"/>
-        <source>Kirghiz, Kyrgyz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="137"/>
-        <source>Komi</source>
-        <translation type="unfinished"></translation>
+        <source>Kikuyu, Gikuyu</source>
+        <translation>Kikuyu, Gikuyu</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="138"/>
-        <source>Kongo</source>
-        <translation type="unfinished"></translation>
+        <source>Kinyarwanda</source>
+        <translation>Kinyarwanda</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="139"/>
+        <source>Kirghiz, Kyrgyz</source>
+        <translation>Kyrgyzština</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="140"/>
+        <source>Komi</source>
+        <translation>Komi</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="141"/>
+        <source>Kongo</source>
+        <translation>Kongo</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="142"/>
         <source>Korean</source>
         <translation>Kórejský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="140"/>
+        <location filename="../../src/mainwindow.cpp" line="143"/>
         <source>Kurdish</source>
         <translation>Kurdský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="141"/>
+        <location filename="../../src/mainwindow.cpp" line="144"/>
         <source>Kwanyama, Kuanyama</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwanyama, Kuanyama</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="142"/>
+        <location filename="../../src/mainwindow.cpp" line="145"/>
         <source>Latin</source>
         <translation>Latinský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="143"/>
-        <source>Luxembourgish, Letzeburgesch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="144"/>
-        <source>Luganda</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="145"/>
-        <source>Limburgish, Limburgan, Limburger</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="146"/>
-        <source>Lingala</source>
-        <translation type="unfinished"></translation>
+        <source>Luxembourgish, Letzeburgesch</source>
+        <translation>Luxemburčina</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="147"/>
-        <source>Lao</source>
-        <translation type="unfinished"></translation>
+        <source>Luganda</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="148"/>
+        <source>Limburgish, Limburgan, Limburger</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="149"/>
+        <source>Lingala</source>
+        <translation>Lingala</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="150"/>
+        <source>Lao</source>
+        <translation>Laoský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="151"/>
         <source>Lithuanian</source>
         <translation>Litovský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="149"/>
+        <location filename="../../src/mainwindow.cpp" line="152"/>
         <source>Luba-Katanga</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="150"/>
+        <location filename="../../src/mainwindow.cpp" line="153"/>
         <source>Latvian</source>
         <translation>Lotyšský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="151"/>
+        <location filename="../../src/mainwindow.cpp" line="154"/>
         <source>Manx</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="152"/>
+        <location filename="../../src/mainwindow.cpp" line="155"/>
         <source>Macedonian</source>
         <translation>Macedónsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="153"/>
-        <source>Malagasy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="154"/>
-        <source>Malay</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="155"/>
-        <source>Malayalam</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="156"/>
-        <source>Maltese</source>
-        <translation type="unfinished"></translation>
+        <source>Malagasy</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="157"/>
-        <source>Māori</source>
-        <translation type="unfinished"></translation>
+        <source>Malay</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="158"/>
-        <source>Marathi (Marāṭhī)</source>
-        <translation type="unfinished"></translation>
+        <source>Malayalam</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="159"/>
-        <source>Marshallese</source>
-        <translation type="unfinished"></translation>
+        <source>Maltese</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="160"/>
-        <source>Mongolian</source>
-        <translation type="unfinished"></translation>
+        <source>Māori</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="161"/>
-        <source>Nauru</source>
-        <translation type="unfinished"></translation>
+        <source>Marathi (Marāṭhī)</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="162"/>
-        <source>Navajo, Navaho</source>
-        <translation type="unfinished"></translation>
+        <source>Marshallese</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="163"/>
-        <source>Norwegian Bokmål</source>
-        <translation type="unfinished"></translation>
+        <source>Mongolian</source>
+        <translation>Mongolský</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="164"/>
-        <source>North Ndebele</source>
-        <translation type="unfinished"></translation>
+        <source>Nauru</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="165"/>
-        <source>Nepali</source>
-        <translation type="unfinished"></translation>
+        <source>Navajo, Navaho</source>
+        <translation>Navajo, Navaho</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="166"/>
-        <source>Ndonga</source>
-        <translation type="unfinished"></translation>
+        <source>Norwegian Bokmål</source>
+        <translation>Nórsky (Bokmål)</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="167"/>
-        <source>Norwegian Nynorsk</source>
-        <translation type="unfinished"></translation>
+        <source>North Ndebele</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="168"/>
+        <source>Nepali</source>
+        <translation>Nepálsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="169"/>
+        <source>Ndonga</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="170"/>
+        <source>Norwegian Nynorsk</source>
+        <translation>Norsky (Nynorsk)</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="171"/>
         <source>Norwegian</source>
         <translation>Nórsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="169"/>
-        <source>Nuosu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="170"/>
-        <source>South Ndebele</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="171"/>
-        <source>Occitan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="172"/>
-        <source>Ojibwe, Ojibwa</source>
-        <translation type="unfinished"></translation>
+        <source>Nuosu</source>
+        <translation>Nuosu</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="173"/>
-        <source>Old Church Slavonic, Church Slavic, Church Slavonic, Old Bulgarian, Old Slavonic</source>
-        <translation type="unfinished"></translation>
+        <source>South Ndebele</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="174"/>
-        <source>Oromo</source>
-        <translation type="unfinished"></translation>
+        <source>Occitan</source>
+        <translation>Occitan</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="175"/>
-        <source>Oriya</source>
-        <translation type="unfinished"></translation>
+        <source>Ojibwe, Ojibwa</source>
+        <translation>Ojibwe, Ojibwa</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="176"/>
-        <source>Ossetian, Ossetic</source>
-        <translation type="unfinished"></translation>
+        <source>Old Church Slavonic, Church Slavic, Church Slavonic, Old Bulgarian, Old Slavonic</source>
+        <translation>Staroslovienský, stará bulharčina</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="177"/>
-        <source>Panjabi, Punjabi</source>
-        <translation type="unfinished"></translation>
+        <source>Oromo</source>
+        <translation>Oromo</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="178"/>
-        <source>Pāli</source>
-        <translation type="unfinished"></translation>
+        <source>Oriya</source>
+        <translation>Oriya</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="179"/>
+        <source>Ossetian, Ossetic</source>
+        <translation>Osetský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="180"/>
+        <source>Panjabi, Punjabi</source>
+        <translation>Pandžábsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="181"/>
+        <source>Pāli</source>
+        <translation>Pāli</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="182"/>
         <source>Persian</source>
         <translation>Peržan</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="180"/>
+        <location filename="../../src/mainwindow.cpp" line="183"/>
         <source>Polish</source>
         <translation>Poľský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="181"/>
+        <location filename="../../src/mainwindow.cpp" line="184"/>
         <source>Pashto, Pushto</source>
-        <translation type="unfinished"></translation>
+        <translation>Pashto, Pushto</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="182"/>
+        <location filename="../../src/mainwindow.cpp" line="185"/>
         <source>Portuguese</source>
         <translation>Portugalský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="183"/>
-        <source>Quechua</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="184"/>
-        <source>Romansh</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="185"/>
-        <source>Kirundi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="186"/>
+        <source>Quechua</source>
+        <translation>Kečuánsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="187"/>
+        <source>Romansh</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="188"/>
+        <source>Kirundi</source>
+        <translation>Kirundi</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="189"/>
         <source>Romanian, Moldavian, Moldovan</source>
         <translation>Rumunské, moldavský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="187"/>
+        <location filename="../../src/mainwindow.cpp" line="190"/>
         <source>Russian</source>
         <translation>Ruský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="188"/>
+        <location filename="../../src/mainwindow.cpp" line="191"/>
         <source>Sanskrit (Saṁskṛta)</source>
         <translation>Sanskrit (Saṁskṛta)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="189"/>
+        <location filename="../../src/mainwindow.cpp" line="192"/>
         <source>Sardinian</source>
         <translation>Sardinský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="190"/>
-        <source>Sindhi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="191"/>
-        <source>Northern Sami</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="192"/>
-        <source>Samoan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="193"/>
-        <source>Sango</source>
-        <translation type="unfinished"></translation>
+        <source>Sindhi</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="194"/>
+        <source>Northern Sami</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="195"/>
+        <source>Samoan</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="196"/>
+        <source>Sango</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="197"/>
         <source>Serbian</source>
         <translation>Srbský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="195"/>
-        <source>Scottish Gaelic; Gaelic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="196"/>
-        <source>Shona</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="197"/>
-        <source>Sinhala, Sinhalese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="198"/>
+        <source>Scottish Gaelic; Gaelic</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="199"/>
+        <source>Shona</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="200"/>
+        <source>Sinhala, Sinhalese</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="201"/>
         <source>Slovak</source>
         <translation>Slovenský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="199"/>
-        <source>Slovene</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="200"/>
-        <source>Somali</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="201"/>
-        <source>Southern Sotho</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="202"/>
+        <source>Slovene</source>
+        <translation>Slovinský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="203"/>
+        <source>Somali</source>
+        <translation>Somálsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="204"/>
+        <source>Southern Sotho</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="205"/>
         <source>Spanish; Castilian</source>
         <translation>Španielsky, Kastliánsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="203"/>
-        <source>Sundanese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="204"/>
-        <source>Swahili</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="205"/>
-        <source>Swati</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="206"/>
+        <source>Sundanese</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="207"/>
+        <source>Swahili</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="208"/>
+        <source>Swati</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="209"/>
         <source>Swedish</source>
         <translation>Švédsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="207"/>
-        <source>Tamil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="208"/>
-        <source>Telugu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="209"/>
-        <source>Tajik</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="210"/>
+        <source>Tamil</source>
+        <translation>Tamilsky</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="211"/>
+        <source>Telugu</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="212"/>
+        <source>Tajik</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="213"/>
         <source>Thai</source>
         <translation>Thajský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="211"/>
+        <location filename="../../src/mainwindow.cpp" line="214"/>
         <source>Tigrinya</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="212"/>
+        <location filename="../../src/mainwindow.cpp" line="215"/>
         <source>Tibetan Standard, Tibetan, Central</source>
-        <translation type="unfinished"></translation>
+        <translation>Tibetský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="213"/>
+        <location filename="../../src/mainwindow.cpp" line="216"/>
         <source>Turkmen</source>
         <translation>Turkménsky</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="214"/>
-        <source>Tagalog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="215"/>
-        <source>Tswana</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="216"/>
-        <source>Tonga (Tonga Islands)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="217"/>
+        <source>Tagalog</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="218"/>
+        <source>Tswana</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="219"/>
+        <source>Tonga (Tonga Islands)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="220"/>
         <source>Turkish</source>
         <translation>Turecký</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="218"/>
-        <source>Tsonga</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="219"/>
-        <source>Tatar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="220"/>
-        <source>Twi</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="221"/>
-        <source>Tahitian</source>
-        <translation type="unfinished"></translation>
+        <source>Tsonga</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="222"/>
-        <source>Uighur, Uyghur</source>
-        <translation type="unfinished"></translation>
+        <source>Tatar</source>
+        <translation>Tatársky</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="223"/>
+        <source>Twi</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="224"/>
+        <source>Tahitian</source>
+        <translation>Tahitský</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="225"/>
+        <source>Uighur, Uyghur</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="226"/>
         <source>Ukrainian</source>
         <translation>Ukrajinský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="224"/>
+        <location filename="../../src/mainwindow.cpp" line="227"/>
         <source>Urdu</source>
-        <translation type="unfinished"></translation>
+        <translation>Urdský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="225"/>
+        <location filename="../../src/mainwindow.cpp" line="228"/>
         <source>Uzbek</source>
         <translation>Uzbecký</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="226"/>
+        <location filename="../../src/mainwindow.cpp" line="229"/>
         <source>Venda</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="227"/>
+        <location filename="../../src/mainwindow.cpp" line="230"/>
         <source>Vietnamese</source>
         <translation>Vietnamský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="228"/>
+        <location filename="../../src/mainwindow.cpp" line="231"/>
         <source>Volapük</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="229"/>
+        <location filename="../../src/mainwindow.cpp" line="232"/>
         <source>Walloon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="230"/>
+        <location filename="../../src/mainwindow.cpp" line="233"/>
         <source>Welsh</source>
         <translation>Waleský</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="231"/>
-        <source>Wolof</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="232"/>
-        <source>Western Frisian</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="233"/>
-        <source>Xhosa</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="234"/>
-        <source>Yiddish</source>
-        <translation type="unfinished"></translation>
+        <source>Wolof</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="235"/>
-        <source>Yoruba</source>
-        <translation type="unfinished"></translation>
+        <source>Western Frisian</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="236"/>
-        <source>Zhuang, Chuang</source>
-        <translation type="unfinished"></translation>
+        <source>Xhosa</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="237"/>
+        <source>Yiddish</source>
+        <translation>Jidiš</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="238"/>
+        <source>Yoruba</source>
+        <translation>Yoruba</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="239"/>
+        <source>Zhuang, Chuang</source>
+        <translation>Zhuang, Chuang</translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="240"/>
         <source>Zulu</source>
         <translation>Zulu</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="238"/>
+        <location filename="../../src/mainwindow.cpp" line="243"/>
         <source>Chinese (Traditional)</source>
         <translation>Čínština (tradičná)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="239"/>
+        <location filename="../../src/mainwindow.cpp" line="244"/>
         <source>Chinese (Simplified)</source>
         <translation>Čínština (zjednodušená)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="240"/>
+        <location filename="../../src/mainwindow.cpp" line="245"/>
         <source>Danish (Fraktur)</source>
         <translation>Dánsky (Fraktur)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="241"/>
+        <location filename="../../src/mainwindow.cpp" line="246"/>
         <source>German (Fraktur)</source>
         <translation>Nemecký (Fraktur)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="242"/>
+        <location filename="../../src/mainwindow.cpp" line="247"/>
         <source>Slovak (Fraktur)</source>
-        <translation>Slovensky (Fraktur)</translation>
+        <translation>Slovenský (Fraktur)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="243"/>
+        <location filename="../../src/mainwindow.cpp" line="248"/>
         <source>Swedish (Fraktur)</source>
         <translation>Švédsky (Fraktur)</translation>
     </message>
@@ -1253,19 +1244,7 @@
     <message>
         <location filename="../../ui/settings.ui" line="73"/>
         <source>&lt;p&gt;Put here path to your tessdata directory. E.g. if your tessdata directory is &amp;quot;C:\Program Files\Tesseract-OCR\tessdata&amp;quot; put here &amp;quot;C:\Program Files\Tesseract-OCR\&amp;quot;.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Uveďte sem cestu k tessdata priečinku. Napr. ak váš priečinok tessdata je &amp;quot;C:\Program Files\Tesseract-OCR\tessdata&amp;quot; vložte sem &amp;quot;C:\Program Files\Tesseract-OCR\&amp;quot;.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Put here path to you tessdata directory. E.g. if you tessdata directory is &amp;quot;C:\Program Files\Tesseract-OCR\tessdata&amp;quot; put here &amp;quot;C:\Program Files\Tesseract-OCR\&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Uveďte sem cestu k tessdata priečinku.Napr. ak je priečinok tessdata je  &amp;quot;C:\Program Files\Tesseract-OCR\tessdata&amp;quot; vložte sem &amp;quot;C:\Program Files\Tesseract-OCR\&amp;quot;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;p&gt;Uveďte sem cestu k tessdata priečinku. Napr. ak váš priečinok tessdata je &quot;C:\Program Files\Tesseract-OCR	essdata&quot; vložte sem &quot;C:\Program Files\Tesseract-OCR\&quot;&lt;p&gt;</translation>
     </message>
     <message>
         <location filename="../../ui/settings.ui" line="83"/>
@@ -1273,13 +1252,19 @@ p, li { white-space: pre-wrap; }
         <translation>Použiť systémové nastavenia</translation>
     </message>
     <message>
-        <source>TESSDATA_PREFIX:</source>
-        <translation type="obsolete">TESSDATA_PREFIX:</translation>
-    </message>
-    <message>
         <location filename="../../ui/settings.ui" line="117"/>
         <source>Check</source>
         <translation>Skontrolovať</translation>
+    </message>
+    <message>
+        <location filename="../../src/settingsdialog.cpp" line="30"/>
+        <source>&amp;Save</source>
+        <translation>U&amp;ložiť</translation>
+    </message>
+    <message>
+        <location filename="../../src/settingsdialog.cpp" line="31"/>
+        <source>&amp;Cancel</source>
+        <translation>&amp;Zrušiť</translation>
     </message>
 </context>
 </TS>
