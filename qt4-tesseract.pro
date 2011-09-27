@@ -25,7 +25,10 @@ CODECFORTR = UTF-8
 
 win32 {
   RC_FILE = resources/qt4tesseract.rc
-  #Release:DEFINES += NO_CONSOLE
+  Release:DEFINES += NO_CONSOLE
+  CONFIG += static release embed_manifest_exe
+  QMAKE_LFLAGS += -static-libgcc -static
+  # -static-libstdc++
   DIR_SEPARATOR = \
 }
 
