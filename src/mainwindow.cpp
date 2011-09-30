@@ -339,9 +339,10 @@ QList<QString> MainWindow::getLangugagelist() {
   QString extention = fi.suffix();
 
   QDir dir(tessdataPath);
+
   if (!dir.exists()) {
     QMessageBox msgBox;
-    msgBox.setText(tr("Cannot find the tessdata directory!\n") +
+    msgBox.setText(tr("Cannot find the tessdata directory '%1'!\n").arg(tessdataPath) +
                 tr("Please check your configuration or tesseract instalation"));
     msgBox.exec();
     }

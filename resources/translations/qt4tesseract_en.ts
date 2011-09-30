@@ -161,58 +161,52 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="344"/>
-        <source>Cannot find the tessdata directory!
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="345"/>
+        <location filename="../../src/mainwindow.cpp" line="346"/>
         <source>Please check your configuration or tesseract instalation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="424"/>
+        <location filename="../../src/mainwindow.cpp" line="425"/>
         <source>OCR program crashed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="426"/>
+        <location filename="../../src/mainwindow.cpp" line="427"/>
         <source>OCR program failed</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="435"/>
+        <location filename="../../src/mainwindow.cpp" line="436"/>
         <source>OCR program not found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="454"/>
+        <location filename="../../src/mainwindow.cpp" line="455"/>
         <source>Select image file...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="484"/>
+        <location filename="../../src/mainwindow.cpp" line="485"/>
         <source>Save to file...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="486"/>
+        <location filename="../../src/mainwindow.cpp" line="487"/>
         <source>Text or html files (*.txt *.html);;All files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="505"/>
+        <location filename="../../src/mainwindow.cpp" line="506"/>
         <source>&lt;h1&gt;QT4 Tesseract OCR GUI&lt;/h1&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="515"/>
+        <location filename="../../src/mainwindow.cpp" line="516"/>
         <source>&lt;p&gt;Translation is done on &lt;a href=&quot;https://www.transifex.net/projects/p/qt4-tesseract&quot;&gt;Transifex.net&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="507"/>
+        <location filename="../../src/mainwindow.cpp" line="508"/>
         <source>&lt;p&gt;This is a simple GUI for tesseract-ocr&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -222,37 +216,43 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="405"/>
+        <location filename="../../src/mainwindow.cpp" line="345"/>
+        <source>Cannot find the tessdata directory &apos;%1&apos;!
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="406"/>
         <source>OCR program started...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="428"/>
+        <location filename="../../src/mainwindow.cpp" line="429"/>
         <source>&lt;font color=green&gt;&lt;b&gt;Ouput created&lt;/b&gt;&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="437"/>
+        <location filename="../../src/mainwindow.cpp" line="438"/>
         <source>&lt;font color=red&gt;&lt;b&gt;Execute error (%1)&lt;/b&gt;&lt;/font&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="508"/>
+        <location filename="../../src/mainwindow.cpp" line="509"/>
         <source>&lt;p&gt;Project page: &lt;a href=%1&gt;%2&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="511"/>
+        <location filename="../../src/mainwindow.cpp" line="512"/>
         <source>Copyright 2011 Zdenko Podobný&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="512"/>
+        <location filename="../../src/mainwindow.cpp" line="513"/>
         <source>&lt;p&gt;This software is released under &lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="532"/>
+        <location filename="../../src/mainwindow.cpp" line="533"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1266,6 +1266,16 @@
     <message>
         <location filename="../../src/settingsdialog.cpp" line="31"/>
         <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/settingsdialog.cpp" line="125"/>
+        <source>Select tesseract OCR Program File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/settingsdialog.cpp" line="132"/>
+        <source>Select Path Prefix To tessdata Directory...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

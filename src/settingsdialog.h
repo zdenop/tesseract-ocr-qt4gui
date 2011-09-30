@@ -26,6 +26,7 @@
 #include <QtCore/QDebug>
 #include <QtCore/QProcess>
 #include <QtCore/QSettings>
+#include <QtGui/QFileDialog>
 
 #include "ui_settings.h"
 
@@ -49,6 +50,8 @@ class SettingsDialog : public QDialog, public Ui::SettingsDialog {
     void on_cb_prefix_toggled();
     void saveSettings();
     void on_pb_check_clicked();
+    void on_pb_prog_clicked();
+    void on_pb_prefix_clicked();
 };
 
 #endif  // SRC_SETTINGSDIALOG_H_

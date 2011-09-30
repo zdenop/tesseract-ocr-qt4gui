@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="sk" version="2.0">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.0" language="sk">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>MainWindow</name>
@@ -156,61 +158,55 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="334"/>
         <source>Unexpexted error: tesseract did not produced expected information!</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="344"/>
-        <source>Cannot find the tessdata directory!
-</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../../src/mainwindow.cpp" line="345"/>
+        <location filename="../../src/mainwindow.cpp" line="346"/>
         <source>Please check your configuration or tesseract instalation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="424"/>
+        <location filename="../../src/mainwindow.cpp" line="425"/>
         <source>OCR program crashed</source>
         <translation>OCR program spadol</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="426"/>
+        <location filename="../../src/mainwindow.cpp" line="427"/>
         <source>OCR program failed</source>
         <translation>OCR program zlyhal</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="435"/>
+        <location filename="../../src/mainwindow.cpp" line="436"/>
         <source>OCR program not found</source>
         <translation>OCR program nebol nájdený</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="454"/>
+        <location filename="../../src/mainwindow.cpp" line="455"/>
         <source>Select image file...</source>
         <translation>Vyberte súbor s obrázkom…</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="484"/>
+        <location filename="../../src/mainwindow.cpp" line="485"/>
         <source>Save to file...</source>
         <translation>Uložiť do súboru…</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="486"/>
+        <location filename="../../src/mainwindow.cpp" line="487"/>
         <source>Text or html files (*.txt *.html);;All files (*)</source>
         <translation>Text alebo HTML súbory (*.txt *.html);;Všetky súbory (*)</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="505"/>
+        <location filename="../../src/mainwindow.cpp" line="506"/>
         <source>&lt;h1&gt;QT4 Tesseract OCR GUI&lt;/h1&gt;</source>
         <translation>&lt;h1&gt;QT4 Tesseract OCR GUI&lt;/h1&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="515"/>
+        <location filename="../../src/mainwindow.cpp" line="516"/>
         <source>&lt;p&gt;Translation is done on &lt;a href=&quot;https://www.transifex.net/projects/p/qt4-tesseract&quot;&gt;Transifex.net&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Preklad bol urobený pomocou &lt;a href=&quot;https://www.transifex.net/projects/p/qt4-tesseract&quot;&gt;Transifex.net&lt;/a&gt;&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="507"/>
+        <location filename="../../src/mainwindow.cpp" line="508"/>
         <source>&lt;p&gt;This is a simple GUI for tesseract-ocr&lt;/p&gt;</source>
         <translation>&lt;p&gt;Toto je jednoduché grafické rozhranie pre tesseract-ocr&lt;/p&gt;</translation>
     </message>
@@ -220,37 +216,43 @@
         <translation>Sp&amp;ustiť</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="405"/>
+        <location filename="../../src/mainwindow.cpp" line="345"/>
+        <source>Cannot find the tessdata directory &apos;%1&apos;!
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="406"/>
         <source>OCR program started...</source>
         <translation>OCR program bol spustený...</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="428"/>
+        <location filename="../../src/mainwindow.cpp" line="429"/>
         <source>&lt;font color=green&gt;&lt;b&gt;Ouput created&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;font color=green&gt;Výstupný súbor bol vytvorený&lt;/font&gt;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="437"/>
+        <location filename="../../src/mainwindow.cpp" line="438"/>
         <source>&lt;font color=red&gt;&lt;b&gt;Execute error (%1)&lt;/b&gt;&lt;/font&gt;</source>
         <translation>&lt;b&gt;&lt;font color=red&gt;Chyba pri spustení programu (%1)&lt;/font&gt;&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="508"/>
+        <location filename="../../src/mainwindow.cpp" line="509"/>
         <source>&lt;p&gt;Project page: &lt;a href=%1&gt;%2&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Stránka projektu: &lt;a href=%1&gt;%2&lt;/a&gt;&lt;/p</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="511"/>
+        <location filename="../../src/mainwindow.cpp" line="512"/>
         <source>Copyright 2011 Zdenko Podobný&lt;/p&gt;</source>
         <translation>Copyright 2011 Zdenko Podobný&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="512"/>
+        <location filename="../../src/mainwindow.cpp" line="513"/>
         <source>&lt;p&gt;This software is released under &lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache License 2.0&lt;/a&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tento softvér je uvoľnený pod &lt;a href=&quot;http://www.apache.org/licenses/LICENSE-2.0&quot;&gt;Apache License 2.0&lt;/a&gt; &lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="532"/>
+        <location filename="../../src/mainwindow.cpp" line="533"/>
         <source>About Qt</source>
         <translation>O Qt</translation>
     </message>
@@ -710,12 +712,12 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="147"/>
         <source>Luganda</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="148"/>
         <source>Limburgish, Limburgan, Limburger</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="149"/>
@@ -735,7 +737,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="152"/>
         <source>Luba-Katanga</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="153"/>
@@ -745,7 +747,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="154"/>
         <source>Manx</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="155"/>
@@ -755,37 +757,37 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="156"/>
         <source>Malagasy</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="157"/>
         <source>Malay</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="158"/>
         <source>Malayalam</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="159"/>
         <source>Maltese</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="160"/>
         <source>Māori</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="161"/>
         <source>Marathi (Marāṭhī)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="162"/>
         <source>Marshallese</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="163"/>
@@ -795,7 +797,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="164"/>
         <source>Nauru</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="165"/>
@@ -810,7 +812,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="167"/>
         <source>North Ndebele</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="168"/>
@@ -820,7 +822,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="169"/>
         <source>Ndonga</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="170"/>
@@ -840,7 +842,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="173"/>
         <source>South Ndebele</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="174"/>
@@ -910,7 +912,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="187"/>
         <source>Romansh</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="188"/>
@@ -940,22 +942,22 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="193"/>
         <source>Sindhi</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="194"/>
         <source>Northern Sami</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="195"/>
         <source>Samoan</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="196"/>
         <source>Sango</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="197"/>
@@ -965,17 +967,17 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="198"/>
         <source>Scottish Gaelic; Gaelic</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="199"/>
         <source>Shona</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="200"/>
         <source>Sinhala, Sinhalese</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="201"/>
@@ -995,7 +997,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="204"/>
         <source>Southern Sotho</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="205"/>
@@ -1005,17 +1007,17 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="206"/>
         <source>Sundanese</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="207"/>
         <source>Swahili</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="208"/>
         <source>Swati</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="209"/>
@@ -1030,12 +1032,12 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="211"/>
         <source>Telugu</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="212"/>
         <source>Tajik</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="213"/>
@@ -1045,7 +1047,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="214"/>
         <source>Tigrinya</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="215"/>
@@ -1060,17 +1062,17 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="217"/>
         <source>Tagalog</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="218"/>
         <source>Tswana</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="219"/>
         <source>Tonga (Tonga Islands)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="220"/>
@@ -1080,7 +1082,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="221"/>
         <source>Tsonga</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="222"/>
@@ -1090,7 +1092,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="223"/>
         <source>Twi</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="224"/>
@@ -1100,7 +1102,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="225"/>
         <source>Uighur, Uyghur</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="226"/>
@@ -1120,7 +1122,7 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="229"/>
         <source>Venda</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="230"/>
@@ -1130,12 +1132,12 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="231"/>
         <source>Volapük</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="232"/>
         <source>Walloon</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="233"/>
@@ -1145,17 +1147,17 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="234"/>
         <source>Wolof</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="235"/>
         <source>Western Frisian</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="236"/>
         <source>Xhosa</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="237"/>
@@ -1265,6 +1267,16 @@
         <location filename="../../src/settingsdialog.cpp" line="31"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušiť</translation>
+    </message>
+    <message>
+        <location filename="../../src/settingsdialog.cpp" line="125"/>
+        <source>Select tesseract OCR Program File...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/settingsdialog.cpp" line="132"/>
+        <source>Select Path Prefix To tessdata Directory...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

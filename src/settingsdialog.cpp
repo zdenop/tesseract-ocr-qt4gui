@@ -118,3 +118,26 @@ void SettingsDialog::on_pb_check_clicked() {
     }
   }
 }
+
+void SettingsDialog::on_pb_prog_clicked() {
+    QString program_file = QFileDialog::getOpenFileName(
+                          this,
+                          tr("Select tesseract OCR Program File..."));
+    ln_prog->setText(program_file);
+}
+
+void SettingsDialog::on_pb_prefix_clicked() {
+    QString prefix_dir = QFileDialog::getExistingDirectory(
+                          this,
+                          tr("Select Path Prefix To tessdata Directory..."),
+                          ln_prefix->text(),
+                          QFileDialog::ShowDirsOnly
+                          | QFileDialog::DontResolveSymlinks);
+
+    // we need only prefix without /tessdata!!!
+    if (prefix_dir.contains(QRegExp("/tessdata$")))
+            prefix_dir.replace(QRegExp("/tessdata$"),"/");
+    else if (prefix_dir.contains(QRegExp("/tessdata/$")))
+        prefix_dir.replace(QRegExp("/tessdata/$"),"/");
+    ln_prefix->setText(prefix_dir);
+}
