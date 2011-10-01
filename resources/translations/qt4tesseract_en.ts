@@ -252,7 +252,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../src/mainwindow.cpp" line="533"/>
+        <location filename="../../src/mainwindow.cpp" line="519"/>
+        <source>&lt;p&gt;Translator: %1&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="519"/>
+        <source>Zdenko Podobný</source>
+        <comment>put here your name</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../src/mainwindow.cpp" line="534"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>

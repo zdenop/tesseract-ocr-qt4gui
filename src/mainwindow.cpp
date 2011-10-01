@@ -516,6 +516,7 @@ void MainWindow::on_actionAbout_triggered() {
   abouttext.append(tr("<p>Translation is done on "
             "<a href=\"https://www.transifex.net/projects/p/qt4-tesseract\">"
             "Transifex.net</a></p>"));
+  abouttext.append(tr("<p>Translator: %1</p>").arg(tr("Zdenko Podobný", "put here your name")));
   aboutMB.setText(abouttext);
 
   aboutMB.setParent(this);
