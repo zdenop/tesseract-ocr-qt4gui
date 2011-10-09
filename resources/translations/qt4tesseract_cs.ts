@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.0" language="cs">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="cs" version="2.0">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>MainWindow</name>
@@ -161,11 +159,6 @@
         <translation>Neočekávaná chyba: tesseract se neposkytl očekávané informace!</translation>
     </message>
     <message>
-        <source>Cannot find the tessdata directory!
-</source>
-        <translation type="obsolete">Nemůžu najít adresář tessdata!</translation>
-    </message>
-    <message>
         <location filename="../../src/mainwindow.cpp" line="346"/>
         <source>Please check your configuration or tesseract instalation</source>
         <translation>Zkontrolujte prosím nastavení nebo tesseract instalaci</translation>
@@ -222,9 +215,9 @@
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="345"/>
-        <source>Cannot find the tessdata directory &apos;%1&apos;!
+        <source>Cannot find the tessdata directory '%1'!
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Nelze najít adresář tessdata ´%1´!⏎</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="406"/>
@@ -259,13 +252,13 @@
     <message>
         <location filename="../../src/mainwindow.cpp" line="519"/>
         <source>&lt;p&gt;Translator: %1&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;p&gt;Translator: %1&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="519"/>
         <source>Zdenko Podobný</source>
         <comment>put here your name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Pavel Fric</translation>
     </message>
     <message>
         <location filename="../../src/mainwindow.cpp" line="534"/>
@@ -1287,12 +1280,12 @@
     <message>
         <location filename="../../src/settingsdialog.cpp" line="125"/>
         <source>Select tesseract OCR Program File...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrat soubor programu OCR tesseract...</translation>
     </message>
     <message>
         <location filename="../../src/settingsdialog.cpp" line="132"/>
         <source>Select Path Prefix To tessdata Directory...</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrat předponu cesty do adresáře tessdata...</translation>
     </message>
 </context>
 </TS>
