@@ -123,7 +123,8 @@ void SettingsDialog::on_pb_prog_clicked() {
     QString program_file = QFileDialog::getOpenFileName(
                           this,
                           tr("Select tesseract OCR Program File..."));
-    ln_prog->setText(program_file);
+    if (program_file != "")
+        ln_prog->setText(program_file);
 }
 
 void SettingsDialog::on_pb_prefix_clicked() {
@@ -139,5 +140,6 @@ void SettingsDialog::on_pb_prefix_clicked() {
             prefix_dir.replace(QRegExp("/tessdata$"),"/");
     else if (prefix_dir.contains(QRegExp("/tessdata/$")))
         prefix_dir.replace(QRegExp("/tessdata/$"),"/");
-    ln_prefix->setText(prefix_dir);
+    if (prefix_dir != "")
+        ln_prefix->setText(prefix_dir);
 }
