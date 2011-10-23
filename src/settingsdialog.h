@@ -30,9 +30,9 @@
 
 #include "ui_settings.h"
 
-const QString ProductVersion("1.00");
-const QString ProjectUrl("https://github.com/zdenop/qt4-tesseract");
-const QString ProjectName("QT4 Tesseract OCR");
+const QString ProductVersion("1.03");
+const QString ProjectUrl("https://github.com/zdenop/tesseract-ocr-qt4gui");
+const QString ProjectName("Tesseract-OCR QT4 gui");
 const QString Organization("tesseract-ocr");
 
 class SettingsDialog : public QDialog, public Ui::SettingsDialog {

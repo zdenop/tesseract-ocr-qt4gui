@@ -1,2 +1,10 @@
+1.02
+- project renamed to "Tesseract-OCR QT4 gui" to avoid name collision with
+  project qtesseract http://code.google.com/p/qtesseract/
+
+1.01
+- fixed "Select" button in Settings dialod
+- improved translation
+
 1.00
 - initial release
