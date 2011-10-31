@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
   // TODO(zdenop): get psm from cmd line ;-)
 
-  setWindowTitle(QString(tr("QT4 Tesseract OCR GUI %1")).arg(ProductVersion));
+  setWindowTitle(QString(tr("Tesseract-OCR QT4 gui %1")).arg(ProductVersion));
   setWindowIcon(QIcon(":/Images/images/qt4tesseract.svg"));
 
   initForm();
@@ -503,7 +503,7 @@ void MainWindow::on_actionAbout_triggered() {
   QPixmap appLogo(":/Images/images/qt4tesseract.svg");
   aboutMB.setIconPixmap(appLogo);
 
-  QString abouttext = tr("<h1>QT4 Tesseract OCR GUI</h1>");
+  QString abouttext = tr("<h1>Tesseract-OCR QT4 gui</h1>");
 
   abouttext.append(tr("<p>This is a simple GUI for tesseract-ocr</p>"));
   abouttext.append(tr("<p>Project page: <a href=%1>%2</a></p>").

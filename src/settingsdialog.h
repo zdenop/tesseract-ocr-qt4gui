@@ -30,7 +30,7 @@
 
 #include "ui_settings.h"
 
-const QString ProductVersion("1.03");
+const QString ProductVersion("1.02");
 const QString ProjectUrl("https://github.com/zdenop/tesseract-ocr-qt4gui");
 const QString ProjectName("Tesseract-OCR QT4 gui");
 const QString Organization("tesseract-ocr");
